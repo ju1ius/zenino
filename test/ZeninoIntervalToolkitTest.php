@@ -103,36 +103,51 @@ class ZeninoIntervalToolkitTest extends PHPUnit_Framework_TestCase
   }
 
   /**
-   * @todo Implement testMinorUnison().
+   * @dataProvider minorUnisonProvider
    */
-  public function testMinorUnison()
+  public function testMinorUnison($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::minorUnison($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function minorUnisonProvider()
+  {
+    return array(
+      array('C', 'Cb'), array('F#','F'), array('Bbb', 'Bbbb'),
+      array('G##', 'G#')
+    );
   }
 
   /**
-   * @todo Implement testMajorUnison().
+   * @dataProvider majorUnisonProvider
    */
-  public function testMajorUnison()
+  public function testMajorUnison($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::majorUnison($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function majorUnisonProvider()
+  {
+    return array(
+      array('C', 'C'), array('F#','F#'), array('Bbb', 'Bbb'),
+      array('G##', 'G##')
+    );
   }
 
   /**
-   * @todo Implement testAugmentedUnison().
+   * @dataProvider augmentedUnisonProvider
    */
-  public function testAugmentedUnison()
+  public function testAugmentedUnison($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::augmentedUnison($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function augmentedUnisonProvider()
+  {
+    return array(
+      array('C', 'C#'), array('F#','F##'), array('Bbb', 'Bb'),
+      array('G##', 'G###')
+    );
   }
 
   /**
@@ -152,278 +167,403 @@ class ZeninoIntervalToolkitTest extends PHPUnit_Framework_TestCase
   }
 
   /**
-   * @todo Implement testMajorSecond().
+   * @dataProvider majorSecondProvider
    */
-  public function testMajorSecond()
+  public function testMajorSecond($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::majorSecond($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function majorSecondProvider()
+  {
+    return array(
+      array('C', 'D'), array('F#','G#'), array('Bbb', 'Cb'),
+      array('G##', 'A##')
+    );
   }
 
   /**
-   * @todo Implement testAugmentedSecond().
+   * @dataProvider augmentedSecondProvider
    */
-  public function testAugmentedSecond()
+  public function testAugmentedSecond($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::augmentedSecond($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function augmentedSecondProvider()
+  {
+    return array(
+      array('C', 'D#'), array('F#','G##'), array('Bbb', 'C'),
+      array('G##', 'A###')
+    );
   }
 
   /**
-   * @todo Implement testDiminishedThird().
+   * @dataProvider diminishedThirdProvider
    */
-  public function testDiminishedThird()
+  public function testDiminishedThird($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::diminishedThird($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function diminishedThirdProvider()
+  {
+    return array(
+      array('C', 'Ebb'), array('F#','Ab'), array('Bbb', 'Dbbb'),
+      array('G##', 'B')
+    );
   }
 
   /**
-   * @todo Implement testMinorThird().
+   * @dataProvider minorThirdProvider
    */
-  public function testMinorThird()
+  public function testMinorThird($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::minorThird($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function minorThirdProvider()
+  {
+    return array(
+      array('C', 'Eb'), array('F#','A'), array('Bbb', 'Dbb'),
+      array('G##', 'B#')
+    );
   }
 
   /**
-   * @todo Implement testMajorThird().
+   * @dataProvider majorThirdProvider
    */
-  public function testMajorThird()
+  public function testMajorThird($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::majorThird($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function majorThirdProvider()
+  {
+    return array(
+      array('C', 'E'), array('F#','A#'), array('Bbb', 'Db'),
+      array('G##', 'B##')
+    );
   }
 
   /**
-   * @todo Implement testAugmentedThird().
+   * @dataProvider augmentedThirdProvider
    */
-  public function testAugmentedThird()
+  public function testAugmentedThird($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::augmentedThird($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function augmentedThirdProvider()
+  {
+    return array(
+      array('C', 'E#'), array('F#','A##'), array('Bbb', 'D'),
+      array('G##', 'B###')
+    );
   }
 
   /**
-   * @todo Implement testDiminishedFourth().
+   * @dataProvider diminishedFourthProvider
    */
-  public function testDiminishedFourth()
+  public function testDiminishedFourth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::diminishedFourth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function diminishedFourthProvider()
+  {
+    return array(
+      array('C', 'Fb'), array('F#','Bb'), array('Bbb', 'Ebbb'),
+      array('G##', 'C#')
+    );
   }
 
   /**
-   * @todo Implement testPerfectFourth().
+   * @dataProvider perfectFourthProvider
    */
-  public function testPerfectFourth()
+  public function testPerfectFourth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::perfectFourth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function perfectFourthProvider()
+  {
+    return array(
+      array('C', 'F'), array('F#','B'), array('Bbb', 'Ebb'),
+      array('G##', 'C##')
+    );
   }
 
   /**
-   * @todo Implement testAugmentedFourth().
+   * @dataProvider augmentedFourthProvider
    */
-  public function testAugmentedFourth()
+  public function testAugmentedFourth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::augmentedFourth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function augmentedFourthProvider()
+  {
+    return array(
+      array('C', 'F#'), array('F#','B#'), array('Bbb', 'Eb'),
+      array('G##', 'C###')
+    );
   }
 
   /**
-   * @todo Implement testDiminishedFifth().
+   * @dataProvider diminishedFifthProvider
    */
-  public function testDiminishedFifth()
+  public function testDiminishedFifth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::diminishedFifth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function diminishedFifthProvider()
+  {
+    return array(
+      array('C', 'Gb'), array('F#','C'), array('Bbb', 'Fbb'),
+      array('G##', 'D#')
+    );
   }
 
   /**
-   * @todo Implement testPerfectFifth().
+   * @dataProvider perfectFifthProvider
    */
-  public function testPerfectFifth()
+  public function testPerfectFifth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::perfectFifth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function perfectFifthProvider()
+  {
+    return array(
+      array('C', 'G'), array('F#','C#'), array('Bbb', 'Fb'),
+      array('G##', 'D##')
+    );
   }
 
   /**
-   * @todo Implement testAugmentedFifth().
+   * @dataProvider augmentedFifthProvider
    */
-  public function testAugmentedFifth()
+  public function testAugmentedFifth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::augmentedFifth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function augmentedFifthProvider()
+  {
+    return array(
+      array('C', 'G#'), array('F#','C##'), array('Bbb', 'F'),
+      array('G##', 'D###')
+    );
   }
 
   /**
-   * @todo Implement testDiminishedSixth().
+   * @dataProvider diminishedSixthProvider
    */
-  public function testDiminishedSixth()
+  public function testDiminishedSixth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::diminishedSixth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function diminishedSixthProvider()
+  {
+    return array(
+      array('C', 'Abb'), array('F#','Db'), array('Bbb', 'Gbbb'),
+      array('G##', 'E')
+    );
   }
 
   /**
-   * @todo Implement testMinorSixth().
+   * @dataProvider minorSixthProvider
    */
-  public function testMinorSixth()
+  public function testMinorSixth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::minorSixth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function minorSixthProvider()
+  {
+    return array(
+      array('C', 'Ab'), array('F#','D'), array('Bbb', 'Gbb'),
+      array('G##', 'E#')
+    );
   }
 
   /**
-   * @todo Implement testMajorSixth().
+   * @dataProvider majorSixthProvider
    */
-  public function testMajorSixth()
+  public function testMajorSixth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::majorSixth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function majorSixthProvider()
+  {
+    return array(
+      array('C', 'A'), array('F#','D#'), array('Bbb', 'Gb'),
+      array('G##', 'E##')
+    );
   }
 
   /**
-   * @todo Implement testDiminishedSeventh().
+   * @dataProvider diminishedSeventhProvider
    */
-  public function testDiminishedSeventh()
+  public function testDiminishedSeventh($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::diminishedSeventh($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function diminishedSeventhProvider()
+  {
+    return array(
+      array('C', 'Bbb'), array('F#','Eb'), array('Bbb', 'Abbb'),
+      array('G##', 'F#')
+    );
   }
 
   /**
-   * @todo Implement testMinorSeventh().
+   * @dataProvider minorSeventhProvider
    */
-  public function testMinorSeventh()
+  public function testMinorSeventh($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::minorSeventh($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function minorSeventhProvider()
+  {
+    return array(
+      array('C', 'Bb'), array('F#','E'), array('Bbb', 'Abb'),
+      array('G##', 'F##')
+    );
   }
 
   /**
-   * @todo Implement testMajorSeventh().
+   * @dataProvider majorSeventhProvider
    */
-  public function testMajorSeventh()
+  public function testMajorSeventh($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::majorSeventh($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function majorSeventhProvider()
+  {
+    return array(
+      array('C', 'B'), array('F#','E#'), array('Bbb', 'Ab'),
+      array('G##', 'F###')
+    );
   }
 
   /**
-   * @todo Implement testMinorNinth().
+   * @dataProvider minorNinthProvider
    */
-  public function testMinorNinth()
+  public function testMinorNinth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::minorNinth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function minorNinthProvider()
+  {
+    return array(
+      array('C', 'Db'), array('F#','G'), array('Bbb', 'Cbb'),
+      array('G##', 'A#')
+    );
   }
 
   /**
-   * @todo Implement testMajorNinth().
+   * @dataProvider majorNinthProvider
    */
-  public function testMajorNinth()
+  public function testMajorNinth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::majorNinth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function majorNinthProvider()
+  {
+    return array(
+      array('C', 'D'), array('F#','G#'), array('Bbb', 'Cb'),
+      array('G##', 'A##')
+    );
   }
 
   /**
-   * @todo Implement testAugmentedNinth().
+   * @dataProvider augmentedNinthProvider
    */
-  public function testAugmentedNinth()
+  public function testAugmentedNinth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::augmentedNinth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function augmentedNinthProvider()
+  {
+    return array(
+      array('C', 'D#'), array('F#','G##'), array('Bbb', 'C'),
+      array('G##', 'A###')
+    );
   }
 
   /**
-   * @todo Implement testPerfectEleventh().
+   * @dataProvider perfectEleventhProvider
    */
-  public function testPerfectEleventh()
+  public function testPerfectEleventh($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::perfectEleventh($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function perfectEleventhProvider()
+  {
+    return array(
+      array('C', 'F'), array('F#','B'), array('Bbb', 'Ebb'),
+      array('G##', 'C##')
+    );
   }
 
   /**
-   * @todo Implement testAugmentedEleventh().
+   * @dataProvider augmentedEleventhProvider
    */
-  public function testAugmentedEleventh()
+  public function testAugmentedEleventh($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::augmentedEleventh($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function augmentedEleventhProvider()
+  {
+    return array(
+      array('C', 'F#'), array('F#','B#'), array('Bbb', 'Eb'),
+      array('G##', 'C###')
+    );
   }
 
   /**
-   * @todo Implement testMinorThirteenth().
+   * @dataProvider minorThirteenthProvider
    */
-  public function testMinorThirteenth()
+  public function testMinorThirteenth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::minorThirteenth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function minorThirteenthProvider()
+  {
+    return array(
+      array('C', 'Ab'), array('F#','D'), array('Bbb', 'Gbb'),
+      array('G##', 'E#')
+    );
   }
 
   /**
-   * @todo Implement testMajorThirteenth().
+   * @dataProvider majorThirteenthProvider
    */
-  public function testMajorThirteenth()
+  public function testMajorThirteenth($note, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::majorThirteenth($note);
+    $this->assertEquals($expected, $result);
+  }
+  public function majorThirteenthProvider()
+  {
+    return array(
+      array('C', 'A'), array('F#','D#'), array('Bbb', 'Gb'),
+      array('G##', 'E##')
+    );
   }
 
   /**

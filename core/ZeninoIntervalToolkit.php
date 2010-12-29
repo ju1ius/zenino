@@ -197,7 +197,7 @@ class ZeninoIntervalToolkit
 		$intervals = array_map(
 			create_function(
 				'$x',
-				'return ZeninoNoteToolkit::noteToInt("'.$key.'") + $x % 12;'
+				'return (ZeninoNoteToolkit::noteToInt("'.$key.'") + $x) % 12;'
 			),
 			array(0, 2, 4, 5, 7, 9, 11)
 		);
@@ -206,19 +206,20 @@ class ZeninoIntervalToolkit
 		{
 			$result = '';
 			if ($kn[0] == $note[0])
+      {
 				$result = ($intervals[array_search($kn, $key_notes)] + $interval) % 12;
-				
-			if(in_array($result, $intervals))
-			{
-				return $key_notes[array_search($result, $intervals)]
-					. implode( ZeninoNoteToolkit::getAccidentals($note) );
-			}
-			else
-			{
-				return ZeninoNoteToolkit::diminish(
-					$key_notes[array_search(($result + 1) % 12, $intervals)]
-						. implode( ZeninoNoteToolkit::getAccidentals($note) )
-				);
+        if(in_array($result, $intervals))
+        {
+          return $key_notes[array_search($result, $intervals)]
+            . implode( ZeninoNoteToolkit::getAccidentals($note) );
+        }
+        else
+        {
+          return ZeninoNoteToolkit::diminish(
+            $key_notes[array_search(($result + 1) % 12, $intervals)]
+              . implode( ZeninoNoteToolkit::getAccidentals($note) )
+          );
+        }
 			}
 		}
 	}
@@ -381,10 +382,10 @@ class ZeninoIntervalToolkit
 	* A helper function for the minor and major functions.
 	* 
 	*/
-	protected static function augmentOrDiminishUntilTheIntervalIsRight($note1, $note2, $interval)
+	public static function augmentOrDiminishUntilTheIntervalIsRight($note1, $note2, $interval)
 	{
 		$cur = self::measure($note1, $note2);
-		while($cur !== $interval)
+		while($cur != $interval)
 		{
 			if($cur > $interval)
 				$note2 = ZeninoNoteToolkit::diminish($note2);
@@ -392,7 +393,7 @@ class ZeninoIntervalToolkit
 				$note2 = ZeninoNoteToolkit::augment($note2);
 			$cur = self::measure($note1, $note2);
 		}
-
+    
 		# We are practically done right now, but we need to be able to create
 		# the minor seventh of Cb and get Bbb instead of B######### as the result
 		$val = 0;

@@ -124,9 +124,7 @@ class ZeninoChordToolkit
 	{
 		if(!ZeninoNoteToolkit::isValidNote($root))
 		{
-			throw new NoteFormatError(
-				sprintf('Unknown note format "%s"', $note)
-			); 
+			throw new NoteFormatError($note); 
 		}
 		$chord = array();
 		$exts = array();

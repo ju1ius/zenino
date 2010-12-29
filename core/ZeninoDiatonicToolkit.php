@@ -30,9 +30,7 @@ class ZeninoDiatonicToolkit
 		
 		if( !ZeninoNoteToolkit::isValidNote($key) )
 		{
-			throw new NoteFormatError(
-				sprintf('Unrecognised format for key "%s"', $key)
-			);
+			throw new NoteFormatError($key);
 		}
 		$base_note = $key[0];
 		$alts = implode( '', ZeninoNoteToolkit::getAccidentals($key) );
@@ -126,9 +124,7 @@ class ZeninoDiatonicToolkit
   {
     if( !ZeninoNoteToolkit::isValidNote($start_note) )
     {
-      throw new NoteFormatError(
-        sprintf('The start note "%s" is not a valid note', $start_note)
-      );
+      throw new NoteFormatError($start_note);
     }
     
     $notes_in_key = self::getNotes($key);

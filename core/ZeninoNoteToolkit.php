@@ -34,12 +34,7 @@ class ZeninoNoteToolkit
 	*/
 	public static function intToNote($int)
 	{
-		if( !self::inRange($int) )
-		{
-			throw new RangeError(
-				sprintf('int out of bounds (0-11): %d', $int)
-			);
-		}
+		if(!self::inRange($int)) throw new RangeError($int, '(0..11)');
 
 		return self::$CHROMATICS[$int];
 	}
@@ -51,17 +46,10 @@ class ZeninoNoteToolkit
 	*/
 	public static function noteToInt($note)
 	{
-		if( self::isValidNote($note) )
-		{
-			$notes = ZeninoTablesOfTheLaw::notes();
-			$val = $notes[$note[0]];
-		}
-		else
-		{
-			throw new NoteFormatError(
-				sprintf('Unknown note format "%s"', $note)
-			);
-		}
+		if(!self::isValidNote($note)) throw new NoteFormatError($note);			
+		
+		$notes = ZeninoTablesOfTheLaw::notes();
+		$val = $notes[$note[0]];
 		
 		// Check for '#' and 'b' postfixes
 		$alts = self::getAccidentals($note);
@@ -73,7 +61,7 @@ class ZeninoNoteToolkit
 				$val += 1;
 		}
 
-		return $val % 12;
+		return LfmMathUtil::modulus($val, 12);
 	}
 	
 	/*
@@ -90,6 +78,7 @@ class ZeninoNoteToolkit
 	*/
 	public static function removeRedundantAccidentals($note)
 	{
+    if(!self::isValidNote($note)) throw new NoteFormatError($note);
 		if(strlen($note) < 2) return $note;
 		
 		$val = 0;

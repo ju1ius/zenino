@@ -1,6 +1,6 @@
 <?php
-
-require_once 'D:\jules\code\zenino\util\LfmMathUtil.php';
+require_once dirname(__FILE__).'/../../ZeninoLoader.php';
+ZeninoLoader::register();
 
 /**
  * Test class for LfmMathUtil.
@@ -27,7 +27,7 @@ class LfmMathUtilTest extends PHPUnit_Framework_TestCase
   /**
    * @dataProvider modulusProvider
    */
-  public function testModulus($divided, $diviser, $expected);
+  public function testModulus($divided, $diviser, $expected)
   {
     $result = LfmMathUtil::modulus($divided, $diviser);
     $this->assertEquals($expected, $result);

@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__).'/../ZeninoLoader.php';
+require_once dirname(__FILE__).'/../../ZeninoLoader.php';
 ZeninoLoader::register();
 /**
  * Test class for ZeninoNoteToolkit.

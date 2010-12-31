@@ -1,0 +1,979 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BASIC_KEYS	core/ZeninoDiatonicToolkit.php	/^	public static $BASIC_KEYS = array($/;"	v
+CHORD_EXTENSIONS	core/ZeninoChordToolkit.php	/^	public static $CHORD_EXTENSIONS = array($/;"	v
+CHROMATICS	core/ZeninoNoteToolkit.php	/^	public static $CHROMATICS = array($/;"	v
+DirectoriesAutoloader	autoload/DirectoriesAutoloader.php	/^class DirectoriesAutoloader$/;"	c
+DirectoriesAutoloaderException	autoload/DirectoriesAutoloader.php	/^class DirectoriesAutoloaderException extends Exception {}$/;"	c
+ExtensionFilterIteratorDecorator	autoload/DirectoriesAutoloader.php	/^class ExtensionFilterIteratorDecorator extends FilterIterator$/;"	c
+FIFTHS	core/ZeninoNoteToolkit.php	/^	public static $FIFTHS = array($/;"	v
+INTERVALS	i18n/ZeninoTranslation.php	/^	public static $INTERVALS = array($/;"	v
+KeyError	exception/KeyError.php	/^class KeyError extends ErrorException$/;"	c
+LfmArrayUtil	util/LfmArrayUtil.php	/^class LfmArrayUtil$/;"	c
+LfmArrayUtilTest	test/util/LfmArrayUtilTest.php	/^class LfmArrayUtilTest extends PHPUnit_Framework_TestCase$/;"	c
+LfmMathUtil	util/LfmMathUtil.php	/^class LfmMathUtil$/;"	c
+LfmMathUtilTest	test/util/LfmMathUtilTest.php	/^class LfmMathUtilTest extends PHPUnit_Framework_TestCase$/;"	c
+LfmRegexUtil	util/LfmRegexUtil.php	/^class LfmRegexUtil$/;"	c
+LfmStringUtil	util/LfmStringUtil.php	/^class LfmStringUtil$/;"	c
+Maj6	core/ZeninoChordToolkit.php	/^	public static function Maj6($note){ return self::majorSixth($note); }$/;"	f
+Maj7	core/ZeninoChordToolkit.php	/^	public static function Maj7($note){ return self::majorSeventh($note); }$/;"	f
+Maj7b5	core/ZeninoChordToolkit.php	/^	public static function Maj7b5($note){ return self::majorSeventhB5($note); }$/;"	f
+Maj7x4	core/ZeninoChordToolkit.php	/^	public static function Maj7x4($note){ return self::majorSeventhB5($note); }$/;"	f
+Maj7x5	core/ZeninoChordToolkit.php	/^	public static function Maj7x5($note){ return self::majorSeventh($note); }$/;"	f
+NOTES	core/ZeninoNoteToolkit.php	/^	public static $NOTES = array($/;"	v
+NoteFormatError	exception/NoteFormatError.php	/^class NoteFormatError extends ErrorException$/;"	c
+RangeError	exception/RangeError.php	/^class RangeError extends ErrorException$/;"	c
+ZeninoChordToolkit	core/ZeninoChordToolkit.php	/^class ZeninoChordToolkit$/;"	c
+ZeninoChordToolkitTest	test/ZeninoChordToolkitTest.php	/^class ZeninoChordToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoChordToolkitTest	test/core/ZeninoChordToolkitTest.php	/^class ZeninoChordToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoDiatonicToolkit	core/ZeninoDiatonicToolkit.php	/^class ZeninoDiatonicToolkit$/;"	c
+ZeninoDiatonicToolkitTest	test/ZeninoDiatonicToolkitTest.php	/^class ZeninoDiatonicToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoDiatonicToolkitTest	test/core/ZeninoDiatonicToolkitTest.php	/^class ZeninoDiatonicToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoHelper	helper/ZeninoHelper.php	/^class ZeninoHelper$/;"	c
+ZeninoIntervalToolkit	core/ZeninoIntervalToolkit.php	/^class ZeninoIntervalToolkit$/;"	c
+ZeninoIntervalToolkitTest	test/core/ZeninoIntervalToolkitTest.php	/^class ZeninoIntervalToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoLoader	ZeninoLoader.php	/^class ZeninoLoader$/;"	c
+ZeninoMode	container/ZeninoMode.php	/^class ZeninoMode implements ArrayAccess$/;"	c
+ZeninoNoteToolkit	core/ZeninoNoteToolkit.php	/^class ZeninoNoteToolkit$/;"	c
+ZeninoNoteToolkitTest	test/core/ZeninoNoteToolkitTest.php	/^class ZeninoNoteToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoScaleToolkit	core/ZeninoScaleToolkit.php	/^class ZeninoScaleToolkit$/;"	c
+ZeninoScaleToolkitTest	test/ZeninoScaleToolkitTest.php	/^class ZeninoScaleToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoScaleToolkitTest	test/core/ZeninoScaleToolkitTest.php	/^class ZeninoScaleToolkitTest extends PHPUnit_Framework_TestCase$/;"	c
+ZeninoTablesOfTheLaw	core/ZeninoTablesOfTheLaw.php	/^class ZeninoTablesOfTheLaw$/;"	c
+ZeninoTranslation	i18n/ZeninoTranslation.php	/^class ZeninoTranslation$/;"	c
+__construct	autoload/DirectoriesAutoloader.php	/^  private function __construct (){}$/;"	f
+__construct	exception/NoteFormatError.php	/^  public function __construct($note)$/;"	f
+__construct	exception/RangeError.php	/^  public function __construct($int, $range)$/;"	f
+__toString	container/ZeninoMode.php	/^	public function __toString()$/;"	f
+_cachePath	autoload/DirectoriesAutoloader.php	/^    $this->_cachePath = $pTmp;$/;"	v
+_cachePath	autoload/DirectoriesAutoloader.php	/^  private $_cachePath;$/;"	v
+_canRegenerate	autoload/DirectoriesAutoloader.php	/^      $this->_canRegenerate = false;\/\/pour éviter que l'on$/;"	v
+_canRegenerate	autoload/DirectoriesAutoloader.php	/^  private $_canRegenerate = true;$/;"	v
+_classes	autoload/DirectoriesAutoloader.php	/^        $this->_classes = $classes;$/;"	v
+_classes	autoload/DirectoriesAutoloader.php	/^  private $_classes = array ();$/;"	v
+_directories	autoload/DirectoriesAutoloader.php	/^  private $_directories = array ();$/;"	v
+_ext	autoload/DirectoriesAutoloader.php	/^    $this->_ext = $pExt;$/;"	v
+_ext	autoload/DirectoriesAutoloader.php	/^  private $_ext;$/;"	v
+_extractClasses	autoload/DirectoriesAutoloader.php	/^  private function _extractClasses ($pFileName)$/;"	f
+_includesAll	autoload/DirectoriesAutoloader.php	/^  private function _includesAll ()$/;"	f
+_instance	autoload/DirectoriesAutoloader.php	/^  private static $_instance = false;$/;"	v
+_loadClass	autoload/DirectoriesAutoloader.php	/^  private function _loadClass ($pClassName)$/;"	f
+_saveIncache	autoload/DirectoriesAutoloader.php	/^  private function _saveIncache ()$/;"	f
+a	test/util/LfmArrayUtilTest.php	/^    $a = range(1,10);$/;"	v
+a_idx	test/test.php	/^	$a_idx = $a[strlen($a)-1];$/;"	v
+accept	autoload/DirectoriesAutoloader.php	/^  public function accept ()$/;"	f
+accidentalToHtml	helper/ZeninoHelper.php	/^	public static function accidentalToHtml($note)$/;"	f
+addDirectory	autoload/DirectoriesAutoloader.php	/^  public function addDirectory ($pDirectory, $pRecursive = true)$/;"	f
+aeolian	core/ZeninoScaleToolkit.php	/^	public static function aeolian($note)$/;"	f
+allowed_exts	core/ZeninoChordToolkit.php	/^  protected static $allowed_exts =  array($/;"	v
+alt	core/ZeninoChordToolkit.php	/^	public static function alt($note){ return self::dominantAltered($note); }$/;"	f
+altered	core/ZeninoScaleToolkit.php	/^	public static function altered($note){ return self::melodicMinor7($note); }$/;"	f
+alts	core/ZeninoDiatonicToolkit.php	/^		$alts = implode( '', ZeninoNoteToolkit::getAccidentals($key) );$/;"	v
+alts	core/ZeninoIntervalToolkit.php	/^		$alts = ZeninoNoteToolkit::getAccidentals($note2);$/;"	v
+alts	core/ZeninoIntervalToolkit.php	/^    $alts = ZeninoNoteToolkit::getAccidentals($note);$/;"	v
+alts	core/ZeninoNoteToolkit.php	/^		$alts = self::getAccidentals($note);$/;"	v
+alts	core/ZeninoNoteToolkit.php	/^		$alts = self::getAccidentals($note_name);$/;"	v
+array	container/ZeninoMode.php	/^		$array = ZeninoScaleToolkit::determine($notes);$/;"	v
+aug	core/ZeninoChordToolkit.php	/^	public static function aug($note){ return self::augmentedTriad($note); }$/;"	f
+augment	core/ZeninoNoteToolkit.php	/^	public static function augment($note)$/;"	f
+augmentOrDiminishUntilTheIntervalIsRight	core/ZeninoIntervalToolkit.php	/^	protected static function augmentOrDiminishUntilTheIntervalIsRight($note1, $note2, $interval)$/;"	f
+augmentProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function augmentProvider()$/;"	f
+augmented	core/ZeninoScaleToolkit.php	/^	public static function augmented($note)$/;"	f
+augmented2	core/ZeninoScaleToolkit.php	/^	public static function augmented2($note)$/;"	f
+augmentedDominantSeventh	core/ZeninoChordToolkit.php	/^	public static function augmentedDominantSeventh($note)$/;"	f
+augmentedEleventh	core/ZeninoIntervalToolkit.php	/^	public static function augmentedEleventh($note){ return self::augmentedFourth($note); }$/;"	f
+augmentedEleventhProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function augmentedEleventhProvider()$/;"	f
+augmentedFifth	core/ZeninoIntervalToolkit.php	/^	public static function augmentedFifth($note)$/;"	f
+augmentedFifthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function augmentedFifthProvider()$/;"	f
+augmentedFourth	core/ZeninoIntervalToolkit.php	/^	public static function augmentedFourth($note)$/;"	f
+augmentedFourthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function augmentedFourthProvider()$/;"	f
+augmentedMajorSeventh	core/ZeninoChordToolkit.php	/^	public static function augmentedMajorSeventh($note)$/;"	f
+augmentedMinorMajorSeventh	core/ZeninoChordToolkit.php	/^	public static function augmentedMinorMajorSeventh($note)$/;"	f
+augmentedNinth	core/ZeninoIntervalToolkit.php	/^	public static function augmentedNinth($note){ return self::augmentedSecond($note); }$/;"	f
+augmentedNinthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function augmentedNinthProvider()$/;"	f
+augmentedSecond	core/ZeninoIntervalToolkit.php	/^	public static function augmentedSecond($note)$/;"	f
+augmentedSecondProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function augmentedSecondProvider()$/;"	f
+augmentedThird	core/ZeninoIntervalToolkit.php	/^	public static function augmentedThird($note)$/;"	f
+augmentedThirdProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function augmentedThirdProvider()$/;"	f
+augmentedTriad	core/ZeninoChordToolkit.php	/^	public static function augmentedTriad($note)$/;"	f
+augmentedUnison	core/ZeninoIntervalToolkit.php	/^	public static function augmentedUnison($note)$/;"	f
+augmentedUnisonProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function augmentedUnisonProvider()$/;"	f
+autoload	autoload/DirectoriesAutoloader.php	/^  public function autoload ($pClassName)$/;"	f
+autoloader	ZeninoLoader.php	/^    $autoloader = DirectoriesAutoloader::instance(self::$cache_dir);$/;"	v
+b_idx	test/test.php	/^	$b_idx = $b[strlen($b)-1];$/;"	v
+bartok	core/ZeninoScaleToolkit.php	/^	public static function bartok($note){ return self::melodicMinor4($note); }$/;"	f
+base_note	core/ZeninoDiatonicToolkit.php	/^		$base_note = $key[0];$/;"	v
+bertha	core/ZeninoScaleToolkit.php	/^	public static function bertha($note){ return self::diminished2($note); }$/;"	f
+cache_dir	ZeninoLoader.php	/^    $cache_dir = null;$/;"	v
+chord	core/ZeninoChordToolkit.php	/^					$chord = array_pad($chord, 5, '');$/;"	v
+chord	core/ZeninoChordToolkit.php	/^					$chord = array_pad($chord, 6, '');$/;"	v
+chord	core/ZeninoChordToolkit.php	/^					$chord = array_pad($chord, 7, '');$/;"	v
+chord	core/ZeninoChordToolkit.php	/^				$chord = self::$function($root);$/;"	v
+chord	core/ZeninoChordToolkit.php	/^		$chord = array();$/;"	v
+chord_name	core/ZeninoChordToolkit.php	/^			$chord_name = $parts[0];$/;"	v
+chromatic	core/ZeninoTablesOfTheLaw.php	/^	public static $chromatic = array($/;"	v
+chromaticScale	core/ZeninoTablesOfTheLaw.php	/^	public static function chromaticScale(){ return self::$chromatic; }$/;"	f
+classHunt	autoload/DirectoriesAutoloader.php	/^          $classHunt = false;$/;"	v
+classHunt	autoload/DirectoriesAutoloader.php	/^          $classHunt = true;$/;"	v
+classHunt	autoload/DirectoriesAutoloader.php	/^    $classHunt = false;$/;"	v
+className	autoload/DirectoriesAutoloader.php	/^    $className = strtolower ($pClassName);$/;"	v
+classes	autoload/DirectoriesAutoloader.php	/^        $classes = $this->_extractClasses ((string) $fileName);$/;"	v
+cmp	test/test.php	/^function cmp($a, $b)$/;"	f
+comp_base	core/ZeninoScaleToolkit.php	/^		$comp_base = '1';$/;"	v
+container	container/ZeninoMode.php	/^		$this->container = $infos;$/;"	v
+container	container/ZeninoMode.php	/^		$this->container = $modes[$name];$/;"	v
+container	container/ZeninoMode.php	/^	protected $container = array($/;"	v
+contains	util/LfmStringUtil.php	/^	public static function contains($needle, $haystack, $ignoreCase=false)$/;"	f
+create	container/ZeninoMode.php	/^	public static function create()$/;"	f
+cur	core/ZeninoIntervalToolkit.php	/^			$cur = self::measure($note1, $note2);$/;"	v
+cur	core/ZeninoIntervalToolkit.php	/^		$cur = self::measure($note1, $note2);$/;"	v
+current	core/ZeninoDiatonicToolkit.php	/^    $current = ZeninoNoteToolkit::noteToInt($key);$/;"	v
+current	core/ZeninoIntervalToolkit.php	/^		$current = self::$fifth_steps[$number_of_fifth_steps];$/;"	v
+cycleOfFifths	core/ZeninoTablesOfTheLaw.php	/^	public static function cycleOfFifths(){ return self::$fifths; }$/;"	f
+determine	core/ZeninoIntervalToolkit.php	/^	public static function determine($note1, $note2)$/;"	f
+determine	core/ZeninoScaleToolkit.php	/^	public static function determine($scale)$/;"	f
+determineProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function determineProvider()$/;"	f
+dh4	core/ZeninoScaleToolkit.php	/^	public static function dh4($note){ return self::doubleHarmonic4($note); }$/;"	f
+dh5	core/ZeninoScaleToolkit.php	/^	public static function dh5($note){ return self::doubleHarmonic5($note); }$/;"	f
+dhalf	core/ZeninoIntervalToolkit.php	/^		$dhalf = self::measure($note1, $note2);$/;"	v
+diatonic	core/ZeninoScaleToolkit.php	/^	public static function diatonic($note)$/;"	f
+dim	core/ZeninoChordToolkit.php	/^	public static function dim($note){ return self::diminishedTriad($note); }$/;"	f
+diminish	core/ZeninoNoteToolkit.php	/^	public static function diminish($note)$/;"	f
+diminishProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function diminishProvider()$/;"	f
+diminished	core/ZeninoScaleToolkit.php	/^	public static function diminished($note)$/;"	f
+diminished2	core/ZeninoScaleToolkit.php	/^	public static function diminished2($note)$/;"	f
+diminishedFifth	core/ZeninoIntervalToolkit.php	/^	public static function diminishedFifth($note)$/;"	f
+diminishedFifthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function diminishedFifthProvider()$/;"	f
+diminishedFourth	core/ZeninoIntervalToolkit.php	/^	public static function diminishedFourth($note)$/;"	f
+diminishedFourthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function diminishedFourthProvider()$/;"	f
+diminishedMajorSeventh	core/ZeninoChordToolkit.php	/^	public static function diminishedMajorSeventh($note)$/;"	f
+diminishedSeventh	core/ZeninoChordToolkit.php	/^	public static function diminishedSeventh($note)$/;"	f
+diminishedSeventh	core/ZeninoIntervalToolkit.php	/^	public static function diminishedSeventh($note)$/;"	f
+diminishedSeventhProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function diminishedSeventhProvider()$/;"	f
+diminishedSixth	core/ZeninoIntervalToolkit.php	/^	public static function diminishedSixth($note)$/;"	f
+diminishedSixthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function diminishedSixthProvider()$/;"	f
+diminishedThird	core/ZeninoIntervalToolkit.php	/^	public static function diminishedThird($note)$/;"	f
+diminishedThirdProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function diminishedThirdProvider()$/;"	f
+diminishedTriad	core/ZeninoChordToolkit.php	/^	public static function diminishedTriad($note)$/;"	f
+dir	autoload/DirectoriesAutoloader.php	/^    $dir = dirname($pTmp);$/;"	v
+directories	autoload/DirectoriesAutoloader.php	/^      $directories = new AppendIterator ();$/;"	v
+dom13	core/ZeninoChordToolkit.php	/^	public static function dom13($note){ return self::dominantThirteenth($note); }$/;"	f
+dom7	core/ZeninoChordToolkit.php	/^	public static function dom7($note){ return self::dominantSeventh($note); }$/;"	f
+dom7b5	core/ZeninoChordToolkit.php	/^	public static function dom7b5($note){ return self::augmentedDominantSeventh($note); }$/;"	f
+dom7sus4	core/ZeninoChordToolkit.php	/^	public static function dom7sus4($note){ return self::dominantSeventhSus4($note); }$/;"	f
+dom7x5	core/ZeninoChordToolkit.php	/^	public static function dom7x5($note){ return self::augmentedDominantSeventh($note); }$/;"	f
+dom9	core/ZeninoChordToolkit.php	/^	public static function dom9($note){ return self::dominantNinth($note); }$/;"	f
+dominantAltered	core/ZeninoChordToolkit.php	/^	public static function dominantAltered($note)$/;"	f
+dominantNinth	core/ZeninoChordToolkit.php	/^	public static function dominantNinth($note)$/;"	f
+dominantSeventh	core/ZeninoChordToolkit.php	/^	public static function dominantSeventh($note)$/;"	f
+dominantSeventhB5	core/ZeninoChordToolkit.php	/^	public static function dominantSeventhB5($note)$/;"	f
+dominantSeventhSus4	core/ZeninoChordToolkit.php	/^	public static function dominantSeventhSus4($note)$/;"	f
+dominantSeventhSus4B5	core/ZeninoChordToolkit.php	/^	public static function dominantSeventhSus4B5($note)$/;"	f
+dominantSeventhSus4B9	core/ZeninoChordToolkit.php	/^	public static function dominantSeventhSus4B9($note)$/;"	f
+dominantThirteenth	core/ZeninoChordToolkit.php	/^	public static function dominantThirteenth($note)$/;"	f
+dorian	core/ZeninoScaleToolkit.php	/^	public static function dorian($note)$/;"	f
+dorianB2	core/ZeninoScaleToolkit.php	/^	public static function dorianB2($note){ return self::melodicMinor2($note); }$/;"	f
+dorianX4	core/ZeninoScaleToolkit.php	/^	public static function dorianX4($note){ return self::harmonicMinor4($note); }$/;"	f
+doubleHarmonic	core/ZeninoScaleToolkit.php	/^	public static function doubleHarmonic($note)$/;"	f
+doubleHarmonic2	core/ZeninoScaleToolkit.php	/^	public static function doubleHarmonic2($note)$/;"	f
+doubleHarmonic3	core/ZeninoScaleToolkit.php	/^	public static function doubleHarmonic3($note)$/;"	f
+doubleHarmonic4	core/ZeninoScaleToolkit.php	/^	public static function doubleHarmonic4($note)$/;"	f
+doubleHarmonic5	core/ZeninoScaleToolkit.php	/^	public static function doubleHarmonic5($note)$/;"	f
+doubleHarmonic6	core/ZeninoScaleToolkit.php	/^	public static function doubleHarmonic6($note)$/;"	f
+doubleHarmonic7	core/ZeninoScaleToolkit.php	/^	public static function doubleHarmonic7($note)$/;"	f
+drop2	core/ZeninoChordToolkit.php	/^			$drop2 = $chord[$len - 2];$/;"	v
+drop2	core/ZeninoChordToolkit.php	/^	public static function drop2($chord)$/;"	f
+drop24	core/ZeninoChordToolkit.php	/^	public static function drop24($chord)$/;"	f
+drop3	core/ZeninoChordToolkit.php	/^			$drop3 = $chord[$len - 3];$/;"	v
+drop3	core/ZeninoChordToolkit.php	/^	public static function drop3($chord)$/;"	f
+drop4	core/ZeninoChordToolkit.php	/^			$drop4 = $chord[$len - 4];$/;"	v
+dump	util/LfmArrayUtil.php	/^	public static function dump($array){$/;"	f
+eleventh	core/ZeninoChordToolkit.php	/^		$eleventh   = array( '11', '#11' );$/;"	v
+entities	helper/ZeninoHelper.php	/^	public static $entities = array($/;"	v
+extend	core/ZeninoChordToolkit.php	/^	public static function extend($chord, $exts)$/;"	f
+exts	core/ZeninoChordToolkit.php	/^			$exts = array_slice($parts, 1);$/;"	v
+exts	core/ZeninoChordToolkit.php	/^		$exts = array();$/;"	v
+fif	core/ZeninoIntervalToolkit.php	/^		$fif = self::fifth($note[0], 'C');$/;"	v
+fifth	core/ZeninoIntervalToolkit.php	/^	public static function fifth($note, $key)$/;"	f
+fifthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function fifthProvider()$/;"	f
+fifth_index	core/ZeninoDiatonicToolkit.php	/^		$fifth_index = array_search($base_note, ZeninoNoteToolkit::$FIFTHS);$/;"	v
+fifth_steps	core/ZeninoIntervalToolkit.php	/^    $fifth_steps = array($/;"	v
+fifths	core/ZeninoTablesOfTheLaw.php	/^	public static $fifths = array($/;"	v
+files	autoload/DirectoriesAutoloader.php	/^      $files = new ExtensionFilterIteratorDecorator($directories);$/;"	v
+findChordScaleArray	test/test.php	/^function findChordScaleArray($root, $chord)$/;"	f
+findChordScaleRegex	test/test.php	/^function findChordScaleRegex($root, $chord)$/;"	f
+fourth	core/ZeninoIntervalToolkit.php	/^	public static function fourth($note, $key)$/;"	f
+fourthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function fourthProvider()$/;"	f
+fromArray	container/ZeninoMode.php	/^	protected function fromArray(Array $infos)$/;"	f
+fromName	container/ZeninoMode.php	/^	public function fromName($tonic, $name)$/;"	f
+fromNotes	container/ZeninoMode.php	/^	public function fromNotes(Array $notes)$/;"	f
+fromShortHand	core/ZeninoChordToolkit.php	/^	public static function fromShortHand($root, $chord_name)$/;"	f
+fromShortHand	core/ZeninoIntervalToolkit.php	/^	public static function fromShortHand($note, $interval, $up = true)$/;"	f
+fromShortHandProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function fromShortHandProvider()$/;"	f
+frt	core/ZeninoIntervalToolkit.php	/^		$frt = self::fourth($note[0], 'C');$/;"	v
+func	util/LfmStringUtil.php	/^		$func = $ignoreCase ? 'stripos' : 'strpos';$/;"	v
+getAccidentals	core/ZeninoNoteToolkit.php	/^	public static function getAccidentals($note)$/;"	f
+getAccidentalsProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function getAccidentalsProvider()$/;"	f
+getAccidentalsValue	core/ZeninoIntervalToolkit.php	/^  protected function getAccidentalsValue($note)$/;"	f
+getInterval	core/ZeninoIntervalToolkit.php	/^	public static function getInterval($note, $interval, $key = 'C')$/;"	f
+getNotes	core/ZeninoDiatonicToolkit.php	/^  public static function getNotes($key)$/;"	f
+getNotesProvider	test/ZeninoDiatonicToolkitTest.php	/^  public function getNotesProvider()$/;"	f
+getNotesProvider	test/core/ZeninoDiatonicToolkitTest.php	/^  public function getNotesProvider()$/;"	f
+halfDiminished	core/ZeninoChordToolkit.php	/^	public static function halfDiminished($note)$/;"	f
+half_notes	core/ZeninoIntervalToolkit.php	/^		$half_notes = self::measure($note1, $note2);$/;"	v
+har	core/ZeninoScaleToolkit.php	/^		$har = self::harmonicMinor($note);$/;"	v
+harmonicMajor	core/ZeninoScaleToolkit.php	/^	public static function harmonicMajor($note)$/;"	f
+harmonicMajor2	core/ZeninoScaleToolkit.php	/^	public static function harmonicMajor2($note)$/;"	f
+harmonicMajor3	core/ZeninoScaleToolkit.php	/^	public static function harmonicMajor3($note)$/;"	f
+harmonicMajor4	core/ZeninoScaleToolkit.php	/^	public static function harmonicMajor4($note)$/;"	f
+harmonicMajor5	core/ZeninoScaleToolkit.php	/^	public static function harmonicMajor5($note)$/;"	f
+harmonicMajor6	core/ZeninoScaleToolkit.php	/^	public static function harmonicMajor6($note)$/;"	f
+harmonicMajor7	core/ZeninoScaleToolkit.php	/^	public static function harmonicMajor7($note)$/;"	f
+harmonicMinor	core/ZeninoScaleToolkit.php	/^	public static function harmonicMinor($note)$/;"	f
+harmonicMinor2	core/ZeninoScaleToolkit.php	/^	public static function harmonicMinor2($note)$/;"	f
+harmonicMinor3	core/ZeninoScaleToolkit.php	/^	public static function harmonicMinor3($note)$/;"	f
+harmonicMinor4	core/ZeninoScaleToolkit.php	/^	public static function harmonicMinor4($note)$/;"	f
+harmonicMinor5	core/ZeninoScaleToolkit.php	/^	public static function harmonicMinor5($note)$/;"	f
+harmonicMinor6	core/ZeninoScaleToolkit.php	/^	public static function harmonicMinor6($note)$/;"	f
+harmonicMinor7	core/ZeninoScaleToolkit.php	/^	public static function harmonicMinor7($note)$/;"	f
+hungarianMinor	core/ZeninoScaleToolkit.php	/^	public static function hungarianMinor($note){ return self::doubleHarmonic4($note); }$/;"	f
+i	core/ZeninoScaleToolkit.php	/^		$i = self::ionian(ZeninoDiatonicToolkit::minorSecond($note));$/;"	v
+i	core/ZeninoScaleToolkit.php	/^		$i = self::ionian(ZeninoDiatonicToolkit::minorSeventh($note));$/;"	v
+i	core/ZeninoScaleToolkit.php	/^		$i = self::ionian(ZeninoDiatonicToolkit::minorSixth($note));$/;"	v
+i	core/ZeninoScaleToolkit.php	/^		$i = self::ionian(ZeninoDiatonicToolkit::minorThird($note));$/;"	v
+i	core/ZeninoScaleToolkit.php	/^		$i = self::ionian(ZeninoDiatonicToolkit::perfectFifth($note));$/;"	v
+i	core/ZeninoScaleToolkit.php	/^		$i = self::ionian(ZeninoDiatonicToolkit::perfectFourth($note));$/;"	v
+inRange	core/ZeninoNoteToolkit.php	/^	public static function inRange($int)$/;"	f
+index	core/ZeninoDiatonicToolkit.php	/^    $index = LfmMathUtil::modulus($start_index + $interval, 7);$/;"	v
+instance	autoload/DirectoriesAutoloader.php	/^  public static function instance ($pTmpPath)$/;"	f
+intToNote	core/ZeninoDiatonicToolkit.php	/^  public static function intToNote($note_int, $key)$/;"	f
+intToNote	core/ZeninoNoteToolkit.php	/^	public static function intToNote($int)$/;"	f
+intToNoteExceptionProvider	test/core/ZeninoNoteToolkitTest.php	/^    public static function intToNoteExceptionProvider()$/;"	f
+intToNoteProvider	test/ZeninoDiatonicToolkitTest.php	/^  public function intToNoteProvider()$/;"	f
+intToNoteProvider	test/core/ZeninoDiatonicToolkitTest.php	/^  public function intToNoteProvider()$/;"	f
+intToNoteProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function intToNoteProvider()$/;"	f
+int_array	core/ZeninoIntervalToolkit.php	/^		$int_array = str_split($interval);$/;"	v
+int_notes	test/core/ZeninoNoteToolkitTest.php	/^    static protected $int_notes = array($/;"	v
+interval	core/ZeninoDiatonicToolkit.php	/^  public static function interval($key, $start_note, $interval)$/;"	f
+interval	core/ZeninoIntervalToolkit.php	/^      $interval = (ZeninoNoteToolkit::noteToInt($key) + $interval) % 12;$/;"	v
+intervalProvider	test/ZeninoDiatonicToolkitTest.php	/^  public function intervalProvider()$/;"	f
+intervalProvider	test/core/ZeninoDiatonicToolkitTest.php	/^  public function intervalProvider()$/;"	f
+intervals	core/ZeninoDiatonicToolkit.php	/^		$intervals = array(0, 2, 4, 5, 7, 9, 11);$/;"	v
+intervals	core/ZeninoIntervalToolkit.php	/^    $intervals = array(0, 2, 4, 5, 7, 9, 11);$/;"	v
+intervals	test/test.php	/^	$intervals = array();$/;"	v
+invert	core/ZeninoChordToolkit.php	/^	public static function invert($chord, $times=1)$/;"	f
+invert	core/ZeninoIntervalToolkit.php	/^	public static function invert($interval)$/;"	f
+ionian	core/ZeninoScaleToolkit.php	/^	public static function ionian($note)$/;"	f
+ionianX2X5	core/ZeninoScaleToolkit.php	/^	public static function ionianX2X5($note){ return self::doubleHarmonic6($note); }$/;"	f
+ionianX5	core/ZeninoScaleToolkit.php	/^	public static function ionianX5($note){ return self::harmonicMinor3($note); }$/;"	f
+isConsonant	core/ZeninoIntervalToolkit.php	/^	public static function isConsonant($note1, $note2, $includeFourths=true)$/;"	f
+isDissonant	core/ZeninoIntervalToolkit.php	/^	public static function isDissonant($note1, $note2, $includeFourths=false)$/;"	f
+isEnharmonic	core/ZeninoNoteToolkit.php	/^	public static function isEnharmonic($note1, $note2)$/;"	f
+isImperfectConsonant	core/ZeninoIntervalToolkit.php	/^	public static function isImperfectConsonant($note1, $note2)$/;"	f
+isPerfectConsonant	core/ZeninoIntervalToolkit.php	/^	public static function isPerfectConsonant($note1, $note2)$/;"	f
+isValidExt	core/ZeninoChordToolkit.php	/^	public static function isValidExt($ext)$/;"	f
+isValidNote	core/ZeninoNoteToolkit.php	/^	public static function isValidNote($note_name)$/;"	f
+isValidNoteProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function isValidNoteProvider()$/;"	f
+keyCache	core/ZeninoDiatonicToolkit.php	/^	protected static $keyCache = array();$/;"	v
+key_notes	core/ZeninoIntervalToolkit.php	/^		$key_notes = ZeninoDiatonicToolkit::getNotes($key);$/;"	v
+known_intervals	core/ZeninoDiatonicToolkit.php	/^    $known_intervals = array();$/;"	v
+known_notes	core/ZeninoDiatonicToolkit.php	/^		$known_notes = self::getNotes($key);$/;"	v
+l	util/LfmArrayUtil.php	/^    $l = count($array);$/;"	v
+len	core/ZeninoChordToolkit.php	/^		$len = count($chord);$/;"	v
+len	core/ZeninoDiatonicToolkit.php	/^			$len = $fifth_index - 1;$/;"	v
+len	core/ZeninoDiatonicToolkit.php	/^      $len = 7;$/;"	v
+locrian	core/ZeninoScaleToolkit.php	/^	public static function locrian($note)$/;"	f
+locrianBB3BB7	core/ZeninoScaleToolkit.php	/^	public static function locrianBB3BB7($note){ return self::doubleHarmonic7($note); }$/;"	f
+locrianBB7	core/ZeninoScaleToolkit.php	/^	public static function locrianBB7($note){ return self::harmonicMajor7($note); }$/;"	f
+locrianN2	core/ZeninoScaleToolkit.php	/^	public static function locrianN2($note){ return self::melodicMinor6($note); }$/;"	f
+locrianN2N6	core/ZeninoScaleToolkit.php	/^	public static function locrianN2N6($note){ return self::harmonicMajor2($note); }$/;"	f
+locrianN5	core/ZeninoScaleToolkit.php	/^	public static function locrianN5($note){ return self::harmonicMajor3($note); }$/;"	f
+locrianN6	core/ZeninoScaleToolkit.php	/^	public static function locrianN6($note){ return self::harmonicMinor2($note); }$/;"	f
+lydian	core/ZeninoScaleToolkit.php	/^	public static function lydian($note)$/;"	f
+lydianB7	core/ZeninoScaleToolkit.php	/^	public static function lydianB7($note){ return self::melodicMinor4($note); }$/;"	f
+lydianX2	core/ZeninoScaleToolkit.php	/^	public static function lydianX2($note){ return self::harmonicMinor6($note); }$/;"	f
+lydianX2X5	core/ZeninoScaleToolkit.php	/^	public static function lydianX2X5($note){ return self::harmonicMajor6($note); }$/;"	f
+lydianX2X6	core/ZeninoScaleToolkit.php	/^	public static function lydianX2X6($note){ return self::doubleHarmonic2($note); }$/;"	f
+lydianX5	core/ZeninoScaleToolkit.php	/^	public static function lydianX5($note){ return self::melodicMinor3($note); }$/;"	f
+maj	core/ZeninoChordToolkit.php	/^	public static function maj($note){ return self::majorTriad($note); }$/;"	f
+maj	core/ZeninoIntervalToolkit.php	/^		$maj = $current[2];$/;"	v
+maj	core/ZeninoScaleToolkit.php	/^		$maj = self::ionian($note);$/;"	v
+maj13	core/ZeninoChordToolkit.php	/^	public static function maj13($note){ return self::majorThirteenth($note); }$/;"	f
+maj9	core/ZeninoChordToolkit.php	/^	public static function maj9($note){ return self::majorNinth($note); }$/;"	f
+majorNinth	core/ZeninoChordToolkit.php	/^	public static function majorNinth($note)$/;"	f
+majorNinth	core/ZeninoIntervalToolkit.php	/^	public static function majorNinth($note){ return self::majorSecond($note); }$/;"	f
+majorNinthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function majorNinthProvider()$/;"	f
+majorSecond	core/ZeninoIntervalToolkit.php	/^	public static function majorSecond($note)$/;"	f
+majorSecondProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function majorSecondProvider()$/;"	f
+majorSeventh	core/ZeninoChordToolkit.php	/^	public static function majorSeventh($note)$/;"	f
+majorSeventh	core/ZeninoIntervalToolkit.php	/^	public static function majorSeventh($note)$/;"	f
+majorSeventhB5	core/ZeninoChordToolkit.php	/^	public static function majorSeventhB5($note)$/;"	f
+majorSeventhProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function majorSeventhProvider()$/;"	f
+majorSixth	core/ZeninoChordToolkit.php	/^	public static function majorSixth($note)$/;"	f
+majorSixth	core/ZeninoIntervalToolkit.php	/^	public static function majorSixth($note)$/;"	f
+majorSixthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function majorSixthProvider()$/;"	f
+majorThird	core/ZeninoIntervalToolkit.php	/^	public static function majorThird($note)$/;"	f
+majorThirdProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function majorThirdProvider()$/;"	f
+majorThirteenth	core/ZeninoIntervalToolkit.php	/^	public static function majorThirteenth($note){ return self::majorSixth($note); }$/;"	f
+majorThirteenthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function majorThirteenthProvider()$/;"	f
+majorTriad	core/ZeninoChordToolkit.php	/^	public static function majorTriad($note)$/;"	f
+majorUnison	core/ZeninoIntervalToolkit.php	/^	public static function majorUnison($note)$/;"	f
+majorUnisonProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function majorUnisonProvider()$/;"	f
+mask	test/test.php	/^	$mask = '(?:(?:#?|b{0,2})[1-7])?';$/;"	v
+matches	test/test.php	/^	$matches = array();$/;"	v
+measure	core/ZeninoIntervalToolkit.php	/^	public static function measure($note1, $note2)$/;"	f
+measureProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function measureProvider()$/;"	f
+melodicMinor	core/ZeninoScaleToolkit.php	/^	public static function melodicMinor($note)$/;"	f
+melodicMinor2	core/ZeninoScaleToolkit.php	/^	public static function melodicMinor2($note)$/;"	f
+melodicMinor3	core/ZeninoScaleToolkit.php	/^	public static function melodicMinor3($note)$/;"	f
+melodicMinor4	core/ZeninoScaleToolkit.php	/^	public static function melodicMinor4($note)$/;"	f
+melodicMinor5	core/ZeninoScaleToolkit.php	/^	public static function melodicMinor5($note)$/;"	f
+melodicMinor6	core/ZeninoScaleToolkit.php	/^	public static function melodicMinor6($note)$/;"	f
+melodicMinor7	core/ZeninoScaleToolkit.php	/^	public static function melodicMinor7($note)$/;"	f
+melodicMinorX4	core/ZeninoScaleToolkit.php	/^	public static function melodicMinorX4($note){ return self::harmonicMajor4($note); }$/;"	f
+min	core/ZeninoChordToolkit.php	/^	public static function min($note){ return self::minorTriad($note); }$/;"	f
+min11	core/ZeninoChordToolkit.php	/^	public static function min11($note){ return self::minorEleventh($note); }$/;"	f
+min13	core/ZeninoChordToolkit.php	/^	public static function min13($note){ return self::minorThirteenth($note); }$/;"	f
+min6	core/ZeninoChordToolkit.php	/^	public static function min6($note){ return self::minorSixth($note); }$/;"	f
+min7	core/ZeninoChordToolkit.php	/^	public static function min7($note){ return self::minorSeventh($note); }$/;"	f
+min7b5	core/ZeninoChordToolkit.php	/^	public static function min7b5($note){ return self::halfDiminished($note); }$/;"	f
+min9	core/ZeninoChordToolkit.php	/^	public static function min9($note){ return self::minorNinth($note); }$/;"	f
+minMaj7	core/ZeninoChordToolkit.php	/^	public static function minMaj7($note){ return self::minorMajorSeventh($note); }$/;"	f
+minMaj7x5	core/ZeninoChordToolkit.php	/^	public static function minMaj7x5($note){ return self::augmentedMinorMajorSeventh($note); }$/;"	f
+minorEleventh	core/ZeninoChordToolkit.php	/^	public static function minorEleventh($note)$/;"	f
+minorMajorSeventh	core/ZeninoChordToolkit.php	/^	public static function minorMajorSeventh($note)$/;"	f
+minorNinth	core/ZeninoChordToolkit.php	/^	public static function minorNinth($note)$/;"	f
+minorNinth	core/ZeninoIntervalToolkit.php	/^	public static function minorNinth($note){ return self::minorSecond($note); }$/;"	f
+minorNinthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function minorNinthProvider()$/;"	f
+minorSecond	core/ZeninoIntervalToolkit.php	/^	public static function minorSecond($note)$/;"	f
+minorSecondProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function minorSecondProvider()$/;"	f
+minorSeventh	core/ZeninoChordToolkit.php	/^	public static function minorSeventh($note)$/;"	f
+minorSeventh	core/ZeninoIntervalToolkit.php	/^	public static function minorSeventh($note)$/;"	f
+minorSeventhProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function minorSeventhProvider()$/;"	f
+minorSixth	core/ZeninoChordToolkit.php	/^	public static function minorSixth($note)$/;"	f
+minorSixth	core/ZeninoIntervalToolkit.php	/^	public static function minorSixth($note)$/;"	f
+minorSixthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function minorSixthProvider()$/;"	f
+minorThird	core/ZeninoIntervalToolkit.php	/^	public static function minorThird($note)$/;"	f
+minorThirdProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function minorThirdProvider()$/;"	f
+minorThirteenth	core/ZeninoChordToolkit.php	/^	public static function minorThirteenth($note)$/;"	f
+minorThirteenth	core/ZeninoIntervalToolkit.php	/^	public static function minorThirteenth($note){ return self::minorSixth($note); }$/;"	f
+minorThirteenthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function minorThirteenthProvider()$/;"	f
+minorTriad	core/ZeninoChordToolkit.php	/^	public static function minorTriad($note)$/;"	f
+minorUnison	core/ZeninoIntervalToolkit.php	/^	public static function minorUnison($note)$/;"	f
+minorUnisonProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function minorUnisonProvider()$/;"	f
+mixolydianB2	core/ZeninoScaleToolkit.php	/^	public static function mixolydianB2($note){ return self::harmonicMajor5($note); }$/;"	f
+mixolydianB6	core/ZeninoScaleToolkit.php	/^	public static function mixolydianB6($note){ return self::melodicMinor5($note); }$/;"	f
+modeNameToHtml	helper/ZeninoHelper.php	/^	public static function modeNameToHtml($name)$/;"	f
+modes	container/ZeninoMode.php	/^		$modes = ZeninoTablesOfTheLaw::modes();$/;"	v
+modes	core/ZeninoTablesOfTheLaw.php	/^	protected static $modes = array($/;"	v
+modes	core/ZeninoTablesOfTheLaw.php	/^	public static function modes(){ return self::$modes; }$/;"	f
+modesForOptions	helper/ZeninoHelper.php	/^	public static function modesForOptions($selected)$/;"	f
+modesNames	core/ZeninoTablesOfTheLaw.php	/^	public static function modesNames(){ return array_keys(self::$modes); }$/;"	f
+modulus	util/LfmMathUtil.php	/^  static public function modulus($a, $b)$/;"	f
+modulusProvider	test/util/LfmMathUtilTest.php	/^  public function modulusProvider()$/;"	f
+myxolydian	core/ZeninoScaleToolkit.php	/^	public static function myxolydian($note)$/;"	f
+n1	core/ZeninoIntervalToolkit.php	/^		$n1 = array_search($note1[0], ZeninoNoteToolkit::$FIFTHS);$/;"	v
+n2	core/ZeninoIntervalToolkit.php	/^		$n2 = array_search($note2[0], ZeninoNoteToolkit::$FIFTHS);$/;"	v
+names	helper/ZeninoHelper.php	/^		$names = ZeninoTablesOfTheLaw::modesNames();$/;"	v
+nat	core/ZeninoScaleToolkit.php	/^		$nat = self::naturalMinor($note);$/;"	v
+naturalMinor	core/ZeninoScaleToolkit.php	/^	public static function naturalMinor($note)$/;"	f
+ninth	core/ZeninoChordToolkit.php	/^		$ninth      = array( 'b9', '9', '#9' );$/;"	v
+note	core/ZeninoChordToolkit.php	/^      $note = self::seventh($note, $key);$/;"	v
+note	core/ZeninoChordToolkit.php	/^      $note = self::triad($note, $key);$/;"	v
+note	core/ZeninoDiatonicToolkit.php	/^      $note = ZeninoNoteToolkit::removeRedundantAccidentals($note);$/;"	v
+note2	core/ZeninoIntervalToolkit.php	/^				$note2 = ZeninoNoteToolkit::augment($note2);$/;"	v
+note2	core/ZeninoIntervalToolkit.php	/^				$note2 = ZeninoNoteToolkit::diminish($note2);$/;"	v
+noteToHtml	helper/ZeninoHelper.php	/^	public static function noteToHtml($note)$/;"	f
+noteToInt	core/ZeninoNoteToolkit.php	/^	public static function noteToInt($note)$/;"	f
+noteToIntProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function noteToIntProvider()$/;"	f
+notes	core/ZeninoChordToolkit.php	/^    $notes = ZeninoDiatonicToolkit::getNotes($key);$/;"	v
+notes	core/ZeninoNoteToolkit.php	/^		$notes = ZeninoTablesOfTheLaw::notes();$/;"	v
+notes	core/ZeninoTablesOfTheLaw.php	/^	protected static $notes = array($/;"	v
+notes	core/ZeninoTablesOfTheLaw.php	/^	public static function notes(){ return self::$notes; }$/;"	f
+notes	test/test.php	/^	$notes = ZeninoChordToolkit::fromShortHand($root, $chord);$/;"	v
+notesForOptions	helper/ZeninoHelper.php	/^	public static function notesForOptions()$/;"	f
+notes_in_key	core/ZeninoDiatonicToolkit.php	/^    $notes_in_key = self::getNotes($key);$/;"	v
+number_of_fifth_steps	core/ZeninoIntervalToolkit.php	/^			$number_of_fifth_steps = 7 - $n1 + $n2;$/;"	v
+number_of_fifth_steps	core/ZeninoIntervalToolkit.php	/^		$number_of_fifth_steps = $n2 - $n1;$/;"	v
+o	core/ZeninoChordToolkit.php	/^	public static function o($note){ return self::diminishedTriad($note); }$/;"	f
+o7	core/ZeninoChordToolkit.php	/^	public static function o7($note){ return self::diminishedSeventh($note); }$/;"	f
+oMaj7	core/ZeninoChordToolkit.php	/^	public static function oMaj7($note){ return self::diminishedMajorSeventh($note); }$/;"	f
+object	test/ZeninoChordToolkitTest.php	/^        $this->object = new ZeninoChordToolkit;$/;"	v
+object	test/ZeninoChordToolkitTest.php	/^    protected $object;$/;"	v
+object	test/ZeninoScaleToolkitTest.php	/^        $this->object = new ZeninoScaleToolkit;$/;"	v
+object	test/ZeninoScaleToolkitTest.php	/^    protected $object;$/;"	v
+object	test/core/ZeninoChordToolkitTest.php	/^        $this->object = new ZeninoChordToolkit;$/;"	v
+object	test/core/ZeninoChordToolkitTest.php	/^    protected $object;$/;"	v
+object	test/core/ZeninoScaleToolkitTest.php	/^        $this->object = new ZeninoScaleToolkit;$/;"	v
+object	test/core/ZeninoScaleToolkitTest.php	/^    protected $object;$/;"	v
+offset	util/LfmArrayUtil.php	/^    $offset = LfmMathUtil::modulus($offset, $l);$/;"	v
+offsetExists	container/ZeninoMode.php	/^	public function offsetExists($offset)$/;"	f
+offsetGet	container/ZeninoMode.php	/^	public function offsetGet($offset)$/;"	f
+offsetSet	container/ZeninoMode.php	/^	public function offsetSet($offset, $value)$/;"	f
+offsetUnset	container/ZeninoMode.php	/^	public function offsetUnset($offset)$/;"	f
+options	helper/ZeninoHelper.php	/^		$options = '<optgroup label="Major Modes">';$/;"	v
+oriental	core/ZeninoScaleToolkit.php	/^	public static function oriental($note){ return self::doubleHarmonic5($note); }$/;"	f
+parseUid	container/ZeninoMode.php	/^	protected function parseUid($uid)$/;"	f
+parts	core/ZeninoChordToolkit.php	/^			$parts = explode('\/', $chord_name);$/;"	v
+paths	ZeninoLoader.php	/^		$paths = null,$/;"	v
+patterns	helper/ZeninoHelper.php	/^		$patterns = array( '\/b\/', '\/n\/', '\/(?<!&)#\/' );$/;"	v
+patterns	helper/ZeninoHelper.php	/^		$patterns = array('\/(?<!^)([A-Z]+)\/', '\/B(?=[\\dB])\/', '\/N(?=\\d)\/', '\/X(?=\\d)\/');$/;"	v
+perfectEleventh	core/ZeninoIntervalToolkit.php	/^	public static function perfectEleventh($note){ return self::perfectFourth($note); }$/;"	f
+perfectEleventhProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function perfectEleventhProvider()$/;"	f
+perfectFifth	core/ZeninoIntervalToolkit.php	/^	public static function perfectFifth($note)$/;"	f
+perfectFifthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function perfectFifthProvider()$/;"	f
+perfectFourth	core/ZeninoIntervalToolkit.php	/^	public static function perfectFourth($note)$/;"	f
+perfectFourthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function perfectFourthProvider()$/;"	f
+phrygian	core/ZeninoScaleToolkit.php	/^	public static function phrygian($note)$/;"	f
+phrygianMajor	core/ZeninoScaleToolkit.php	/^	public static function phrygianMajor($note){ return self::harmonicMinor5($note); }$/;"	f
+phrygianN6	core/ZeninoScaleToolkit.php	/^	public static function phrygianN6($note){ return self::melodicMinor2($note); }$/;"	f
+pos	util/LfmStringUtil.php	/^		$pos = $func($haystack, $needle);$/;"	v
+r	core/ZeninoIntervalToolkit.php	/^    $r = 0;$/;"	v
+redundantProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function redundantProvider()$/;"	f
+register	ZeninoLoader.php	/^	static public function register()$/;"	f
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::doubleHarmonic(ZeninoIntervalToolkit::majorSeventh($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::doubleHarmonic(ZeninoIntervalToolkit::majorThird($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::doubleHarmonic(ZeninoIntervalToolkit::minorSecond($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::doubleHarmonic(ZeninoIntervalToolkit::minorSixth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::doubleHarmonic(ZeninoIntervalToolkit::perfectFifth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::doubleHarmonic(ZeninoIntervalToolkit::perfectFourth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMajor(ZeninoIntervalToolkit::majorThird($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMajor(ZeninoIntervalToolkit::minorSecond($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMajor(ZeninoIntervalToolkit::minorSeventh($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMajor(ZeninoIntervalToolkit::minorSixth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMajor(ZeninoIntervalToolkit::perfectFifth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMajor(ZeninoIntervalToolkit::perfectFourth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMinor(ZeninoIntervalToolkit::majorSixth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMinor(ZeninoIntervalToolkit::majorThird($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMinor(ZeninoIntervalToolkit::minorSecond($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMinor(ZeninoIntervalToolkit::minorSeventh($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMinor(ZeninoIntervalToolkit::perfectFifth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::harmonicMinor(ZeninoIntervalToolkit::perfectFourth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::melodicMinor(ZeninoIntervalToolkit::majorSixth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::melodicMinor(ZeninoIntervalToolkit::minorSecond($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::melodicMinor(ZeninoIntervalToolkit::minorSeventh($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::melodicMinor(ZeninoIntervalToolkit::minorThird($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::melodicMinor(ZeninoIntervalToolkit::perfectFifth($note));$/;"	v
+rel	core/ZeninoScaleToolkit.php	/^		$rel = self::melodicMinor(ZeninoIntervalToolkit::perfectFourth($note));$/;"	v
+removeRedundantAccidentals	core/ZeninoNoteToolkit.php	/^	public static function removeRedundantAccidentals($note)$/;"	f
+replacements	helper/ZeninoHelper.php	/^		$replacements = array($/;"	v
+res	core/ZeninoIntervalToolkit.php	/^		$res = ZeninoNoteToolkit::noteToInt($note2) - ZeninoNoteToolkit::noteToInt($note1);$/;"	v
+result	core/ZeninoIntervalToolkit.php	/^				$result = ($intervals[array_search($kn, $key_notes)] + $interval) % 12;$/;"	v
+result	core/ZeninoIntervalToolkit.php	/^			$result = '';$/;"	v
+result	core/ZeninoIntervalToolkit.php	/^			$result = ZeninoNoteToolkit::augment($result);$/;"	v
+result	core/ZeninoIntervalToolkit.php	/^			$result = ZeninoNoteToolkit::diminish($result);$/;"	v
+result	core/ZeninoIntervalToolkit.php	/^		$result = $note2[0];$/;"	v
+result	core/ZeninoNoteToolkit.php	/^			$result = self::augment($result);$/;"	v
+result	core/ZeninoNoteToolkit.php	/^			$result = self::diminish($result);$/;"	v
+result	core/ZeninoNoteToolkit.php	/^		$result = $note[0];$/;"	v
+result	test/ZeninoDiatonicToolkitTest.php	/^    $result = ZeninoDiatonicToolkit::getNotes($key);$/;"	v
+result	test/ZeninoDiatonicToolkitTest.php	/^    $result = ZeninoDiatonicToolkit::intToNote($int, $key);$/;"	v
+result	test/ZeninoDiatonicToolkitTest.php	/^    $result = ZeninoDiatonicToolkit::interval($key, $start_note, $interval);$/;"	v
+result	test/core/ZeninoDiatonicToolkitTest.php	/^    $result = ZeninoDiatonicToolkit::getNotes($key);$/;"	v
+result	test/core/ZeninoDiatonicToolkitTest.php	/^    $result = ZeninoDiatonicToolkit::intToNote($int, $key);$/;"	v
+result	test/core/ZeninoDiatonicToolkitTest.php	/^    $result = ZeninoDiatonicToolkit::interval($key, $start_note, $interval);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::augmentedEleventh($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::augmentedFifth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::augmentedFourth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::augmentedNinth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::augmentedSecond($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::augmentedThird($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::augmentedUnison($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::determine($note1, $note2);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::diminishedFifth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::diminishedFourth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::diminishedSeventh($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::diminishedSixth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::diminishedThird($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::fifth($note, $key);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::fourth($note, $key);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::fromShortHand($note, $interval, $up);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::majorNinth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::majorSecond($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::majorSeventh($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::majorSixth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::majorThird($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::majorThirteenth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::majorUnison($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::measure($note1, $note2);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::minorNinth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::minorSecond($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::minorSeventh($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::minorSixth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::minorThird($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::minorThirteenth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::minorUnison($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::perfectEleventh($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::perfectFifth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::perfectFourth($note);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::second($note, $key);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::seventh($note, $key);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::sixth($note, $key);$/;"	v
+result	test/core/ZeninoIntervalToolkitTest.php	/^    $result = ZeninoIntervalToolkit::third($note, $key);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::augment($note);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::diminish($note);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::getAccidentals($note);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::intToNote($int);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::isValidNote($note);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::noteToInt($note);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::removeRedundantAccidentals($note);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::toMajor($note);$/;"	v
+result	test/core/ZeninoNoteToolkitTest.php	/^      $result = ZeninoNoteToolkit::toMinor($note);$/;"	v
+result	test/util/LfmArrayUtilTest.php	/^    $result = LfmArrayUtil::rotate($array, $offset);$/;"	v
+result	test/util/LfmMathUtilTest.php	/^    $result = LfmMathUtil::modulus($divided, $diviser);$/;"	v
+results	core/ZeninoDiatonicToolkit.php	/^		$results = LfmArrayUtil::rotate($results, $tonic);$/;"	v
+results	core/ZeninoDiatonicToolkit.php	/^		$results = array();$/;"	v
+rotate	util/LfmArrayUtil.php	/^  public static function rotate($array, $offset)$/;"	f
+rotateProvider	test/util/LfmArrayUtilTest.php	/^  public function rotateProvider()$/;"	f
+s	core/ZeninoScaleToolkit.php	/^		$s = ZeninoDiatonicToolkit::getNotes(ZeninoNoteToolkit::toMajor($note));$/;"	v
+search	test/test.php	/^	$search = '\/'.implode($mask, $intervals).'\/';$/;"	v
+sec	core/ZeninoIntervalToolkit.php	/^		$sec = self::second($note[0], 'C');$/;"	v
+second	core/ZeninoIntervalToolkit.php	/^	public static function second($note, $key)$/;"	f
+secondProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function secondProvider()$/;"	f
+setCachePath	autoload/DirectoriesAutoloader.php	/^  public function setCachePath($pTmp)$/;"	f
+setExtension	autoload/DirectoriesAutoloader.php	/^  public function setExtension ($pExt)$/;"	f
+setUp	test/ZeninoChordToolkitTest.php	/^    protected function setUp()$/;"	f
+setUp	test/ZeninoDiatonicToolkitTest.php	/^  protected function setUp()$/;"	f
+setUp	test/ZeninoScaleToolkitTest.php	/^    protected function setUp()$/;"	f
+setUp	test/core/ZeninoChordToolkitTest.php	/^    protected function setUp()$/;"	f
+setUp	test/core/ZeninoDiatonicToolkitTest.php	/^  protected function setUp()$/;"	f
+setUp	test/core/ZeninoIntervalToolkitTest.php	/^  protected function setUp()$/;"	f
+setUp	test/core/ZeninoNoteToolkitTest.php	/^    protected function setUp()$/;"	f
+setUp	test/core/ZeninoScaleToolkitTest.php	/^    protected function setUp()$/;"	f
+setUp	test/util/LfmArrayUtilTest.php	/^  protected function setUp()$/;"	f
+setUp	test/util/LfmMathUtilTest.php	/^  protected function setUp()$/;"	f
+setupPaths	ZeninoLoader.php	/^  static protected function setupPaths()$/;"	f
+seventh	core/ZeninoChordToolkit.php	/^	public static function seventh($note, $key)$/;"	f
+seventh	core/ZeninoIntervalToolkit.php	/^	public static function seventh($note, $key)$/;"	f
+seventhProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function seventhProvider()$/;"	f
+sevenths	core/ZeninoChordToolkit.php	/^	public static function sevenths($key)$/;"	f
+seventhsCache	core/ZeninoChordToolkit.php	/^	protected static $seventhsCache = array();$/;"	v
+shorthand_lookup	core/ZeninoIntervalToolkit.php	/^    $shorthand_lookup = array($/;"	v
+shorthands	core/ZeninoChordToolkit.php	/^	public static $shorthands = array($/;"	v
+sixth	core/ZeninoIntervalToolkit.php	/^	public static function sixth($note, $key)$/;"	f
+sixthProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function sixthProvider()$/;"	f
+splitCamelCase	util/LfmRegexUtil.php	/^	public static function splitCamelCase($str)$/;"	f
+start_index	core/ZeninoDiatonicToolkit.php	/^        $start_index = array_search($note, $notes_in_key);$/;"	v
+sth	core/ZeninoIntervalToolkit.php	/^		$sth = self::seventh($note[0], 'C');$/;"	v
+sth	core/ZeninoIntervalToolkit.php	/^		$sth = self::sixth($note[0], 'C');$/;"	v
+superLocrian	core/ZeninoScaleToolkit.php	/^	public static function superLocrian($note){ return self::melodicMinor7($note); }$/;"	f
+superLocrianBB7	core/ZeninoScaleToolkit.php	/^	public static function superLocrianBB7($note){ return self::harmonicMinor7($note); }$/;"	f
+superLocrianN5BB7	core/ZeninoScaleToolkit.php	/^	public static function superLocrianN5BB7($note){ return self::doubleHarmonic3($note); }$/;"	f
+sus2	core/ZeninoChordToolkit.php	/^	public static function sus2($note){ return self::sus2Triad($note); }$/;"	f
+sus2Triad	core/ZeninoChordToolkit.php	/^	public static function sus2Triad($note)$/;"	f
+sus4	core/ZeninoChordToolkit.php	/^	public static function sus4($note){ return self::sus4Triad($note); }$/;"	f
+sus4Triad	core/ZeninoChordToolkit.php	/^	public static function sus4Triad($note)$/;"	f
+sus4b5	core/ZeninoChordToolkit.php	/^	public static function sus4b5($note){ return self::dominantSeventhSus4B5($note); }$/;"	f
+sus4b9	core/ZeninoChordToolkit.php	/^	public static function sus4b9($note){ return self::dominantSeventhSus4B9($note); }$/;"	f
+t	core/ZeninoChordToolkit.php	/^		$t = self::augmentedTriad($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::diminishedTriad($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::dominantSeventh($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::dominantSeventhSus4($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::majorSeventh($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::majorTriad($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::minorMajorSeventh($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::minorSeventh($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::minorTriad($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::sus4Triad($note);$/;"	v
+t	core/ZeninoChordToolkit.php	/^		$t = self::triad($note, $jey);$/;"	v
+tearDown	test/ZeninoChordToolkitTest.php	/^    protected function tearDown()$/;"	f
+tearDown	test/ZeninoDiatonicToolkitTest.php	/^  protected function tearDown()$/;"	f
+tearDown	test/ZeninoScaleToolkitTest.php	/^    protected function tearDown()$/;"	f
+tearDown	test/core/ZeninoChordToolkitTest.php	/^    protected function tearDown()$/;"	f
+tearDown	test/core/ZeninoDiatonicToolkitTest.php	/^  protected function tearDown()$/;"	f
+tearDown	test/core/ZeninoIntervalToolkitTest.php	/^  protected function tearDown()$/;"	f
+tearDown	test/core/ZeninoNoteToolkitTest.php	/^    protected function tearDown()$/;"	f
+tearDown	test/core/ZeninoScaleToolkitTest.php	/^    protected function tearDown()$/;"	f
+tearDown	test/util/LfmArrayUtilTest.php	/^  protected function tearDown()$/;"	f
+tearDown	test/util/LfmMathUtilTest.php	/^  protected function tearDown()$/;"	f
+testAeolian	test/ZeninoScaleToolkitTest.php	/^    public function testAeolian()$/;"	f
+testAeolian	test/core/ZeninoScaleToolkitTest.php	/^    public function testAeolian()$/;"	f
+testAlt	test/ZeninoChordToolkitTest.php	/^    public function testAlt()$/;"	f
+testAlt	test/core/ZeninoChordToolkitTest.php	/^    public function testAlt()$/;"	f
+testAltered	test/ZeninoScaleToolkitTest.php	/^    public function testAltered()$/;"	f
+testAltered	test/core/ZeninoScaleToolkitTest.php	/^    public function testAltered()$/;"	f
+testAug	test/ZeninoChordToolkitTest.php	/^    public function testAug()$/;"	f
+testAug	test/core/ZeninoChordToolkitTest.php	/^    public function testAug()$/;"	f
+testAugment	test/core/ZeninoNoteToolkitTest.php	/^    public function testAugment($note, $expected)$/;"	f
+testAugmented	test/ZeninoScaleToolkitTest.php	/^    public function testAugmented()$/;"	f
+testAugmented	test/core/ZeninoScaleToolkitTest.php	/^    public function testAugmented()$/;"	f
+testAugmented2	test/ZeninoScaleToolkitTest.php	/^    public function testAugmented2()$/;"	f
+testAugmented2	test/core/ZeninoScaleToolkitTest.php	/^    public function testAugmented2()$/;"	f
+testAugmentedDominantSeventh	test/ZeninoChordToolkitTest.php	/^    public function testAugmentedDominantSeventh()$/;"	f
+testAugmentedDominantSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testAugmentedDominantSeventh()$/;"	f
+testAugmentedEleventh	test/core/ZeninoIntervalToolkitTest.php	/^  public function testAugmentedEleventh($note, $expected)$/;"	f
+testAugmentedFifth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testAugmentedFifth($note, $expected)$/;"	f
+testAugmentedFourth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testAugmentedFourth($note, $expected)$/;"	f
+testAugmentedMajorSeventh	test/ZeninoChordToolkitTest.php	/^    public function testAugmentedMajorSeventh()$/;"	f
+testAugmentedMajorSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testAugmentedMajorSeventh()$/;"	f
+testAugmentedMinorMajorSeventh	test/ZeninoChordToolkitTest.php	/^    public function testAugmentedMinorMajorSeventh()$/;"	f
+testAugmentedMinorMajorSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testAugmentedMinorMajorSeventh()$/;"	f
+testAugmentedNinth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testAugmentedNinth($note, $expected)$/;"	f
+testAugmentedSecond	test/core/ZeninoIntervalToolkitTest.php	/^  public function testAugmentedSecond($note, $expected)$/;"	f
+testAugmentedThird	test/core/ZeninoIntervalToolkitTest.php	/^  public function testAugmentedThird($note, $expected)$/;"	f
+testAugmentedTriad	test/ZeninoChordToolkitTest.php	/^    public function testAugmentedTriad()$/;"	f
+testAugmentedTriad	test/core/ZeninoChordToolkitTest.php	/^    public function testAugmentedTriad()$/;"	f
+testAugmentedUnison	test/core/ZeninoIntervalToolkitTest.php	/^  public function testAugmentedUnison($note, $expected)$/;"	f
+testBartok	test/ZeninoScaleToolkitTest.php	/^    public function testBartok()$/;"	f
+testBartok	test/core/ZeninoScaleToolkitTest.php	/^    public function testBartok()$/;"	f
+testBertha	test/ZeninoScaleToolkitTest.php	/^    public function testBertha()$/;"	f
+testBertha	test/core/ZeninoScaleToolkitTest.php	/^    public function testBertha()$/;"	f
+testDetermine	test/ZeninoScaleToolkitTest.php	/^    public function testDetermine()$/;"	f
+testDetermine	test/core/ZeninoIntervalToolkitTest.php	/^  public function testDetermine($note1, $note2, $expected)$/;"	f
+testDetermine	test/core/ZeninoScaleToolkitTest.php	/^    public function testDetermine()$/;"	f
+testDh4	test/ZeninoScaleToolkitTest.php	/^    public function testDh4()$/;"	f
+testDh4	test/core/ZeninoScaleToolkitTest.php	/^    public function testDh4()$/;"	f
+testDh5	test/ZeninoScaleToolkitTest.php	/^    public function testDh5()$/;"	f
+testDh5	test/core/ZeninoScaleToolkitTest.php	/^    public function testDh5()$/;"	f
+testDiatonic	test/ZeninoScaleToolkitTest.php	/^    public function testDiatonic()$/;"	f
+testDiatonic	test/core/ZeninoScaleToolkitTest.php	/^    public function testDiatonic()$/;"	f
+testDim	test/ZeninoChordToolkitTest.php	/^    public function testDim()$/;"	f
+testDim	test/core/ZeninoChordToolkitTest.php	/^    public function testDim()$/;"	f
+testDiminish	test/core/ZeninoNoteToolkitTest.php	/^    public function testDiminish($note, $expected)$/;"	f
+testDiminished	test/ZeninoScaleToolkitTest.php	/^    public function testDiminished()$/;"	f
+testDiminished	test/core/ZeninoScaleToolkitTest.php	/^    public function testDiminished()$/;"	f
+testDiminished2	test/ZeninoScaleToolkitTest.php	/^    public function testDiminished2()$/;"	f
+testDiminished2	test/core/ZeninoScaleToolkitTest.php	/^    public function testDiminished2()$/;"	f
+testDiminishedFifth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testDiminishedFifth($note, $expected)$/;"	f
+testDiminishedFourth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testDiminishedFourth($note, $expected)$/;"	f
+testDiminishedMajorSeventh	test/ZeninoChordToolkitTest.php	/^    public function testDiminishedMajorSeventh()$/;"	f
+testDiminishedMajorSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testDiminishedMajorSeventh()$/;"	f
+testDiminishedSeventh	test/ZeninoChordToolkitTest.php	/^    public function testDiminishedSeventh()$/;"	f
+testDiminishedSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testDiminishedSeventh()$/;"	f
+testDiminishedSeventh	test/core/ZeninoIntervalToolkitTest.php	/^  public function testDiminishedSeventh($note, $expected)$/;"	f
+testDiminishedSixth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testDiminishedSixth($note, $expected)$/;"	f
+testDiminishedThird	test/core/ZeninoIntervalToolkitTest.php	/^  public function testDiminishedThird($note, $expected)$/;"	f
+testDiminishedTriad	test/ZeninoChordToolkitTest.php	/^    public function testDiminishedTriad()$/;"	f
+testDiminishedTriad	test/core/ZeninoChordToolkitTest.php	/^    public function testDiminishedTriad()$/;"	f
+testDom13	test/ZeninoChordToolkitTest.php	/^    public function testDom13()$/;"	f
+testDom13	test/core/ZeninoChordToolkitTest.php	/^    public function testDom13()$/;"	f
+testDom7	test/ZeninoChordToolkitTest.php	/^    public function testDom7()$/;"	f
+testDom7	test/core/ZeninoChordToolkitTest.php	/^    public function testDom7()$/;"	f
+testDom7b5	test/ZeninoChordToolkitTest.php	/^    public function testDom7b5()$/;"	f
+testDom7b5	test/core/ZeninoChordToolkitTest.php	/^    public function testDom7b5()$/;"	f
+testDom7sus4	test/ZeninoChordToolkitTest.php	/^    public function testDom7sus4()$/;"	f
+testDom7sus4	test/core/ZeninoChordToolkitTest.php	/^    public function testDom7sus4()$/;"	f
+testDom7x5	test/ZeninoChordToolkitTest.php	/^    public function testDom7x5()$/;"	f
+testDom7x5	test/core/ZeninoChordToolkitTest.php	/^    public function testDom7x5()$/;"	f
+testDom9	test/ZeninoChordToolkitTest.php	/^    public function testDom9()$/;"	f
+testDom9	test/core/ZeninoChordToolkitTest.php	/^    public function testDom9()$/;"	f
+testDominantAltered	test/ZeninoChordToolkitTest.php	/^    public function testDominantAltered()$/;"	f
+testDominantAltered	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantAltered()$/;"	f
+testDominantNinth	test/ZeninoChordToolkitTest.php	/^    public function testDominantNinth()$/;"	f
+testDominantNinth	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantNinth()$/;"	f
+testDominantSeventh	test/ZeninoChordToolkitTest.php	/^    public function testDominantSeventh()$/;"	f
+testDominantSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantSeventh()$/;"	f
+testDominantSeventhB5	test/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhB5()$/;"	f
+testDominantSeventhB5	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhB5()$/;"	f
+testDominantSeventhSus4	test/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhSus4()$/;"	f
+testDominantSeventhSus4	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhSus4()$/;"	f
+testDominantSeventhSus4B5	test/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhSus4B5()$/;"	f
+testDominantSeventhSus4B5	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhSus4B5()$/;"	f
+testDominantSeventhSus4B9	test/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhSus4B9()$/;"	f
+testDominantSeventhSus4B9	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantSeventhSus4B9()$/;"	f
+testDominantThirteenth	test/ZeninoChordToolkitTest.php	/^    public function testDominantThirteenth()$/;"	f
+testDominantThirteenth	test/core/ZeninoChordToolkitTest.php	/^    public function testDominantThirteenth()$/;"	f
+testDorian	test/ZeninoScaleToolkitTest.php	/^    public function testDorian()$/;"	f
+testDorian	test/core/ZeninoScaleToolkitTest.php	/^    public function testDorian()$/;"	f
+testDorianB2	test/ZeninoScaleToolkitTest.php	/^    public function testDorianB2()$/;"	f
+testDorianB2	test/core/ZeninoScaleToolkitTest.php	/^    public function testDorianB2()$/;"	f
+testDorianX4	test/ZeninoScaleToolkitTest.php	/^    public function testDorianX4()$/;"	f
+testDorianX4	test/core/ZeninoScaleToolkitTest.php	/^    public function testDorianX4()$/;"	f
+testDoubleHarmonic	test/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic()$/;"	f
+testDoubleHarmonic	test/core/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic()$/;"	f
+testDoubleHarmonic2	test/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic2()$/;"	f
+testDoubleHarmonic2	test/core/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic2()$/;"	f
+testDoubleHarmonic3	test/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic3()$/;"	f
+testDoubleHarmonic3	test/core/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic3()$/;"	f
+testDoubleHarmonic4	test/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic4()$/;"	f
+testDoubleHarmonic4	test/core/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic4()$/;"	f
+testDoubleHarmonic5	test/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic5()$/;"	f
+testDoubleHarmonic5	test/core/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic5()$/;"	f
+testDoubleHarmonic6	test/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic6()$/;"	f
+testDoubleHarmonic6	test/core/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic6()$/;"	f
+testDoubleHarmonic7	test/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic7()$/;"	f
+testDoubleHarmonic7	test/core/ZeninoScaleToolkitTest.php	/^    public function testDoubleHarmonic7()$/;"	f
+testDrop2	test/ZeninoChordToolkitTest.php	/^    public function testDrop2()$/;"	f
+testDrop2	test/core/ZeninoChordToolkitTest.php	/^    public function testDrop2()$/;"	f
+testDrop24	test/ZeninoChordToolkitTest.php	/^    public function testDrop24()$/;"	f
+testDrop24	test/core/ZeninoChordToolkitTest.php	/^    public function testDrop24()$/;"	f
+testDrop3	test/ZeninoChordToolkitTest.php	/^    public function testDrop3()$/;"	f
+testDrop3	test/core/ZeninoChordToolkitTest.php	/^    public function testDrop3()$/;"	f
+testExtend	test/ZeninoChordToolkitTest.php	/^    public function testExtend()$/;"	f
+testExtend	test/core/ZeninoChordToolkitTest.php	/^    public function testExtend()$/;"	f
+testFifth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testFifth($note, $key, $expected)$/;"	f
+testFourth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testFourth($note, $key, $expected)$/;"	f
+testFromShortHand	test/ZeninoChordToolkitTest.php	/^    public function testFromShortHand()$/;"	f
+testFromShortHand	test/core/ZeninoChordToolkitTest.php	/^    public function testFromShortHand()$/;"	f
+testFromShortHand	test/core/ZeninoIntervalToolkitTest.php	/^  public function testFromShortHand($note, $interval, $up, $expected)$/;"	f
+testGetAccidentals	test/core/ZeninoNoteToolkitTest.php	/^    public function testGetAccidentals($note, $expected)$/;"	f
+testGetInterval	test/core/ZeninoIntervalToolkitTest.php	/^  public function testGetInterval()$/;"	f
+testGetNotes	test/ZeninoDiatonicToolkitTest.php	/^  public function testGetNotes($key, $expected)$/;"	f
+testGetNotes	test/core/ZeninoDiatonicToolkitTest.php	/^  public function testGetNotes($key, $expected)$/;"	f
+testHalfDiminished	test/ZeninoChordToolkitTest.php	/^    public function testHalfDiminished()$/;"	f
+testHalfDiminished	test/core/ZeninoChordToolkitTest.php	/^    public function testHalfDiminished()$/;"	f
+testHarmonicMajor	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor()$/;"	f
+testHarmonicMajor	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor()$/;"	f
+testHarmonicMajor2	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor2()$/;"	f
+testHarmonicMajor2	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor2()$/;"	f
+testHarmonicMajor3	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor3()$/;"	f
+testHarmonicMajor3	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor3()$/;"	f
+testHarmonicMajor4	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor4()$/;"	f
+testHarmonicMajor4	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor4()$/;"	f
+testHarmonicMajor5	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor5()$/;"	f
+testHarmonicMajor5	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor5()$/;"	f
+testHarmonicMajor6	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor6()$/;"	f
+testHarmonicMajor6	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor6()$/;"	f
+testHarmonicMajor7	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor7()$/;"	f
+testHarmonicMajor7	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMajor7()$/;"	f
+testHarmonicMinor	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor()$/;"	f
+testHarmonicMinor	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor()$/;"	f
+testHarmonicMinor2	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor2()$/;"	f
+testHarmonicMinor2	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor2()$/;"	f
+testHarmonicMinor3	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor3()$/;"	f
+testHarmonicMinor3	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor3()$/;"	f
+testHarmonicMinor4	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor4()$/;"	f
+testHarmonicMinor4	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor4()$/;"	f
+testHarmonicMinor5	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor5()$/;"	f
+testHarmonicMinor5	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor5()$/;"	f
+testHarmonicMinor6	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor6()$/;"	f
+testHarmonicMinor6	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor6()$/;"	f
+testHarmonicMinor7	test/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor7()$/;"	f
+testHarmonicMinor7	test/core/ZeninoScaleToolkitTest.php	/^    public function testHarmonicMinor7()$/;"	f
+testHungarianMinor	test/ZeninoScaleToolkitTest.php	/^    public function testHungarianMinor()$/;"	f
+testHungarianMinor	test/core/ZeninoScaleToolkitTest.php	/^    public function testHungarianMinor()$/;"	f
+testIntToNote	test/ZeninoDiatonicToolkitTest.php	/^  public function testIntToNote($int, $key, $expected)$/;"	f
+testIntToNote	test/core/ZeninoDiatonicToolkitTest.php	/^  public function testIntToNote($int, $key, $expected)$/;"	f
+testIntToNote	test/core/ZeninoNoteToolkitTest.php	/^    public function testIntToNote($int, $expected)$/;"	f
+testIntToNoteException	test/core/ZeninoNoteToolkitTest.php	/^    public function testIntToNoteException($int)$/;"	f
+testInterval	test/ZeninoDiatonicToolkitTest.php	/^  public function testInterval($key, $start_note, $interval, $expected)$/;"	f
+testInterval	test/core/ZeninoDiatonicToolkitTest.php	/^  public function testInterval($key, $start_note, $interval, $expected)$/;"	f
+testInvert	test/ZeninoChordToolkitTest.php	/^    public function testInvert()$/;"	f
+testInvert	test/core/ZeninoChordToolkitTest.php	/^    public function testInvert()$/;"	f
+testInvert	test/core/ZeninoIntervalToolkitTest.php	/^  public function testInvert()$/;"	f
+testIonian	test/ZeninoScaleToolkitTest.php	/^    public function testIonian()$/;"	f
+testIonian	test/core/ZeninoScaleToolkitTest.php	/^    public function testIonian()$/;"	f
+testIonianX2X5	test/ZeninoScaleToolkitTest.php	/^    public function testIonianX2X5()$/;"	f
+testIonianX2X5	test/core/ZeninoScaleToolkitTest.php	/^    public function testIonianX2X5()$/;"	f
+testIonianX5	test/ZeninoScaleToolkitTest.php	/^    public function testIonianX5()$/;"	f
+testIonianX5	test/core/ZeninoScaleToolkitTest.php	/^    public function testIonianX5()$/;"	f
+testIsEnharmonic	test/core/ZeninoNoteToolkitTest.php	/^    public function testIsEnharmonic()$/;"	f
+testIsValidExt	test/ZeninoChordToolkitTest.php	/^    public function testIsValidExt()$/;"	f
+testIsValidExt	test/core/ZeninoChordToolkitTest.php	/^    public function testIsValidExt()$/;"	f
+testIsValidNote	test/core/ZeninoNoteToolkitTest.php	/^    public function testIsValidNote($note, $expected)$/;"	f
+testLocrian	test/ZeninoScaleToolkitTest.php	/^    public function testLocrian()$/;"	f
+testLocrian	test/core/ZeninoScaleToolkitTest.php	/^    public function testLocrian()$/;"	f
+testLocrianBB3BB7	test/ZeninoScaleToolkitTest.php	/^    public function testLocrianBB3BB7()$/;"	f
+testLocrianBB3BB7	test/core/ZeninoScaleToolkitTest.php	/^    public function testLocrianBB3BB7()$/;"	f
+testLocrianBB7	test/ZeninoScaleToolkitTest.php	/^    public function testLocrianBB7()$/;"	f
+testLocrianBB7	test/core/ZeninoScaleToolkitTest.php	/^    public function testLocrianBB7()$/;"	f
+testLocrianN2	test/ZeninoScaleToolkitTest.php	/^    public function testLocrianN2()$/;"	f
+testLocrianN2	test/core/ZeninoScaleToolkitTest.php	/^    public function testLocrianN2()$/;"	f
+testLocrianN2N6	test/ZeninoScaleToolkitTest.php	/^    public function testLocrianN2N6()$/;"	f
+testLocrianN2N6	test/core/ZeninoScaleToolkitTest.php	/^    public function testLocrianN2N6()$/;"	f
+testLocrianN5	test/ZeninoScaleToolkitTest.php	/^    public function testLocrianN5()$/;"	f
+testLocrianN5	test/core/ZeninoScaleToolkitTest.php	/^    public function testLocrianN5()$/;"	f
+testLocrianN6	test/ZeninoScaleToolkitTest.php	/^    public function testLocrianN6()$/;"	f
+testLocrianN6	test/core/ZeninoScaleToolkitTest.php	/^    public function testLocrianN6()$/;"	f
+testLydian	test/ZeninoScaleToolkitTest.php	/^    public function testLydian()$/;"	f
+testLydian	test/core/ZeninoScaleToolkitTest.php	/^    public function testLydian()$/;"	f
+testLydianB7	test/ZeninoScaleToolkitTest.php	/^    public function testLydianB7()$/;"	f
+testLydianB7	test/core/ZeninoScaleToolkitTest.php	/^    public function testLydianB7()$/;"	f
+testLydianX2	test/ZeninoScaleToolkitTest.php	/^    public function testLydianX2()$/;"	f
+testLydianX2	test/core/ZeninoScaleToolkitTest.php	/^    public function testLydianX2()$/;"	f
+testLydianX2X5	test/ZeninoScaleToolkitTest.php	/^    public function testLydianX2X5()$/;"	f
+testLydianX2X5	test/core/ZeninoScaleToolkitTest.php	/^    public function testLydianX2X5()$/;"	f
+testLydianX2X6	test/ZeninoScaleToolkitTest.php	/^    public function testLydianX2X6()$/;"	f
+testLydianX2X6	test/core/ZeninoScaleToolkitTest.php	/^    public function testLydianX2X6()$/;"	f
+testLydianX5	test/ZeninoScaleToolkitTest.php	/^    public function testLydianX5()$/;"	f
+testLydianX5	test/core/ZeninoScaleToolkitTest.php	/^    public function testLydianX5()$/;"	f
+testMaj	test/ZeninoChordToolkitTest.php	/^    public function testMaj()$/;"	f
+testMaj	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj()$/;"	f
+testMaj13	test/ZeninoChordToolkitTest.php	/^    public function testMaj13()$/;"	f
+testMaj13	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj13()$/;"	f
+testMaj6	test/ZeninoChordToolkitTest.php	/^    public function testMaj6()$/;"	f
+testMaj6	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj6()$/;"	f
+testMaj7	test/ZeninoChordToolkitTest.php	/^    public function testMaj7()$/;"	f
+testMaj7	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj7()$/;"	f
+testMaj7b5	test/ZeninoChordToolkitTest.php	/^    public function testMaj7b5()$/;"	f
+testMaj7b5	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj7b5()$/;"	f
+testMaj7x4	test/ZeninoChordToolkitTest.php	/^    public function testMaj7x4()$/;"	f
+testMaj7x4	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj7x4()$/;"	f
+testMaj7x5	test/ZeninoChordToolkitTest.php	/^    public function testMaj7x5()$/;"	f
+testMaj7x5	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj7x5()$/;"	f
+testMaj9	test/ZeninoChordToolkitTest.php	/^    public function testMaj9()$/;"	f
+testMaj9	test/core/ZeninoChordToolkitTest.php	/^    public function testMaj9()$/;"	f
+testMajorNinth	test/ZeninoChordToolkitTest.php	/^    public function testMajorNinth()$/;"	f
+testMajorNinth	test/core/ZeninoChordToolkitTest.php	/^    public function testMajorNinth()$/;"	f
+testMajorNinth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMajorNinth($note, $expected)$/;"	f
+testMajorSecond	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMajorSecond($note, $expected)$/;"	f
+testMajorSeventh	test/ZeninoChordToolkitTest.php	/^    public function testMajorSeventh()$/;"	f
+testMajorSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testMajorSeventh()$/;"	f
+testMajorSeventh	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMajorSeventh($note, $expected)$/;"	f
+testMajorSeventhB5	test/ZeninoChordToolkitTest.php	/^    public function testMajorSeventhB5()$/;"	f
+testMajorSeventhB5	test/core/ZeninoChordToolkitTest.php	/^    public function testMajorSeventhB5()$/;"	f
+testMajorSixth	test/ZeninoChordToolkitTest.php	/^    public function testMajorSixth()$/;"	f
+testMajorSixth	test/core/ZeninoChordToolkitTest.php	/^    public function testMajorSixth()$/;"	f
+testMajorSixth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMajorSixth($note, $expected)$/;"	f
+testMajorThird	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMajorThird($note, $expected)$/;"	f
+testMajorThirteenth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMajorThirteenth($note, $expected)$/;"	f
+testMajorTriad	test/ZeninoChordToolkitTest.php	/^    public function testMajorTriad()$/;"	f
+testMajorTriad	test/core/ZeninoChordToolkitTest.php	/^    public function testMajorTriad()$/;"	f
+testMajorUnison	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMajorUnison($note, $expected)$/;"	f
+testMeasure	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMeasure($note1, $note2, $expected)$/;"	f
+testMelodicMinor	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor()$/;"	f
+testMelodicMinor	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor()$/;"	f
+testMelodicMinor2	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor2()$/;"	f
+testMelodicMinor2	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor2()$/;"	f
+testMelodicMinor3	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor3()$/;"	f
+testMelodicMinor3	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor3()$/;"	f
+testMelodicMinor4	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor4()$/;"	f
+testMelodicMinor4	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor4()$/;"	f
+testMelodicMinor5	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor5()$/;"	f
+testMelodicMinor5	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor5()$/;"	f
+testMelodicMinor6	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor6()$/;"	f
+testMelodicMinor6	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor6()$/;"	f
+testMelodicMinor7	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor7()$/;"	f
+testMelodicMinor7	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinor7()$/;"	f
+testMelodicMinorX4	test/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinorX4()$/;"	f
+testMelodicMinorX4	test/core/ZeninoScaleToolkitTest.php	/^    public function testMelodicMinorX4()$/;"	f
+testMin	test/ZeninoChordToolkitTest.php	/^    public function testMin()$/;"	f
+testMin	test/core/ZeninoChordToolkitTest.php	/^    public function testMin()$/;"	f
+testMin11	test/ZeninoChordToolkitTest.php	/^    public function testMin11()$/;"	f
+testMin11	test/core/ZeninoChordToolkitTest.php	/^    public function testMin11()$/;"	f
+testMin13	test/ZeninoChordToolkitTest.php	/^    public function testMin13()$/;"	f
+testMin13	test/core/ZeninoChordToolkitTest.php	/^    public function testMin13()$/;"	f
+testMin6	test/ZeninoChordToolkitTest.php	/^    public function testMin6()$/;"	f
+testMin6	test/core/ZeninoChordToolkitTest.php	/^    public function testMin6()$/;"	f
+testMin7	test/ZeninoChordToolkitTest.php	/^    public function testMin7()$/;"	f
+testMin7	test/core/ZeninoChordToolkitTest.php	/^    public function testMin7()$/;"	f
+testMin7b5	test/ZeninoChordToolkitTest.php	/^    public function testMin7b5()$/;"	f
+testMin7b5	test/core/ZeninoChordToolkitTest.php	/^    public function testMin7b5()$/;"	f
+testMin9	test/ZeninoChordToolkitTest.php	/^    public function testMin9()$/;"	f
+testMin9	test/core/ZeninoChordToolkitTest.php	/^    public function testMin9()$/;"	f
+testMinMaj7	test/ZeninoChordToolkitTest.php	/^    public function testMinMaj7()$/;"	f
+testMinMaj7	test/core/ZeninoChordToolkitTest.php	/^    public function testMinMaj7()$/;"	f
+testMinMaj7x5	test/ZeninoChordToolkitTest.php	/^    public function testMinMaj7x5()$/;"	f
+testMinMaj7x5	test/core/ZeninoChordToolkitTest.php	/^    public function testMinMaj7x5()$/;"	f
+testMinorEleventh	test/ZeninoChordToolkitTest.php	/^    public function testMinorEleventh()$/;"	f
+testMinorEleventh	test/core/ZeninoChordToolkitTest.php	/^    public function testMinorEleventh()$/;"	f
+testMinorMajorSeventh	test/ZeninoChordToolkitTest.php	/^    public function testMinorMajorSeventh()$/;"	f
+testMinorMajorSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testMinorMajorSeventh()$/;"	f
+testMinorNinth	test/ZeninoChordToolkitTest.php	/^    public function testMinorNinth()$/;"	f
+testMinorNinth	test/core/ZeninoChordToolkitTest.php	/^    public function testMinorNinth()$/;"	f
+testMinorNinth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMinorNinth($note, $expected)$/;"	f
+testMinorSecond	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMinorSecond($note, $expected)$/;"	f
+testMinorSeventh	test/ZeninoChordToolkitTest.php	/^    public function testMinorSeventh()$/;"	f
+testMinorSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testMinorSeventh()$/;"	f
+testMinorSeventh	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMinorSeventh($note, $expected)$/;"	f
+testMinorSixth	test/ZeninoChordToolkitTest.php	/^    public function testMinorSixth()$/;"	f
+testMinorSixth	test/core/ZeninoChordToolkitTest.php	/^    public function testMinorSixth()$/;"	f
+testMinorSixth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMinorSixth($note, $expected)$/;"	f
+testMinorThird	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMinorThird($note, $expected)$/;"	f
+testMinorThirteenth	test/ZeninoChordToolkitTest.php	/^    public function testMinorThirteenth()$/;"	f
+testMinorThirteenth	test/core/ZeninoChordToolkitTest.php	/^    public function testMinorThirteenth()$/;"	f
+testMinorThirteenth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMinorThirteenth($note, $expected)$/;"	f
+testMinorTriad	test/ZeninoChordToolkitTest.php	/^    public function testMinorTriad()$/;"	f
+testMinorTriad	test/core/ZeninoChordToolkitTest.php	/^    public function testMinorTriad()$/;"	f
+testMinorUnison	test/core/ZeninoIntervalToolkitTest.php	/^  public function testMinorUnison($note, $expected)$/;"	f
+testMixolydianB2	test/ZeninoScaleToolkitTest.php	/^    public function testMixolydianB2()$/;"	f
+testMixolydianB2	test/core/ZeninoScaleToolkitTest.php	/^    public function testMixolydianB2()$/;"	f
+testMixolydianB6	test/ZeninoScaleToolkitTest.php	/^    public function testMixolydianB6()$/;"	f
+testMixolydianB6	test/core/ZeninoScaleToolkitTest.php	/^    public function testMixolydianB6()$/;"	f
+testModulus	test/util/LfmMathUtilTest.php	/^  public function testModulus($divided, $diviser, $expected)$/;"	f
+testMyxolydian	test/ZeninoScaleToolkitTest.php	/^    public function testMyxolydian()$/;"	f
+testMyxolydian	test/core/ZeninoScaleToolkitTest.php	/^    public function testMyxolydian()$/;"	f
+testNaturalMinor	test/ZeninoScaleToolkitTest.php	/^    public function testNaturalMinor()$/;"	f
+testNaturalMinor	test/core/ZeninoScaleToolkitTest.php	/^    public function testNaturalMinor()$/;"	f
+testNoteToInt	test/core/ZeninoNoteToolkitTest.php	/^    public function testNoteToInt($note, $expected)$/;"	f
+testNoteToIntReturnsInt	test/core/ZeninoNoteToolkitTest.php	/^    public function testNoteToIntReturnsInt($note, $expected)$/;"	f
+testO	test/ZeninoChordToolkitTest.php	/^    public function testO()$/;"	f
+testO	test/core/ZeninoChordToolkitTest.php	/^    public function testO()$/;"	f
+testO7	test/ZeninoChordToolkitTest.php	/^    public function testO7()$/;"	f
+testO7	test/core/ZeninoChordToolkitTest.php	/^    public function testO7()$/;"	f
+testOMaj7	test/ZeninoChordToolkitTest.php	/^    public function testOMaj7()$/;"	f
+testOMaj7	test/core/ZeninoChordToolkitTest.php	/^    public function testOMaj7()$/;"	f
+testOriental	test/ZeninoScaleToolkitTest.php	/^    public function testOriental()$/;"	f
+testOriental	test/core/ZeninoScaleToolkitTest.php	/^    public function testOriental()$/;"	f
+testPerfectEleventh	test/core/ZeninoIntervalToolkitTest.php	/^  public function testPerfectEleventh($note, $expected)$/;"	f
+testPerfectFifth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testPerfectFifth($note, $expected)$/;"	f
+testPerfectFourth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testPerfectFourth($note, $expected)$/;"	f
+testPhrygian	test/ZeninoScaleToolkitTest.php	/^    public function testPhrygian()$/;"	f
+testPhrygian	test/core/ZeninoScaleToolkitTest.php	/^    public function testPhrygian()$/;"	f
+testPhrygianMajor	test/ZeninoScaleToolkitTest.php	/^    public function testPhrygianMajor()$/;"	f
+testPhrygianMajor	test/core/ZeninoScaleToolkitTest.php	/^    public function testPhrygianMajor()$/;"	f
+testPhrygianN6	test/ZeninoScaleToolkitTest.php	/^    public function testPhrygianN6()$/;"	f
+testPhrygianN6	test/core/ZeninoScaleToolkitTest.php	/^    public function testPhrygianN6()$/;"	f
+testRemoveRedundantAccidentals	test/core/ZeninoNoteToolkitTest.php	/^    public function testRemoveRedundantAccidentals($note, $expected)$/;"	f
+testRotate	test/util/LfmArrayUtilTest.php	/^  public function testRotate($array, $offset, $expected)$/;"	f
+testSecond	test/core/ZeninoIntervalToolkitTest.php	/^  public function testSecond($note, $key, $expected)$/;"	f
+testSeventh	test/ZeninoChordToolkitTest.php	/^    public function testSeventh()$/;"	f
+testSeventh	test/core/ZeninoChordToolkitTest.php	/^    public function testSeventh()$/;"	f
+testSeventh	test/core/ZeninoIntervalToolkitTest.php	/^  public function testSeventh($note, $key, $expected)$/;"	f
+testSevenths	test/ZeninoChordToolkitTest.php	/^    public function testSevenths()$/;"	f
+testSevenths	test/core/ZeninoChordToolkitTest.php	/^    public function testSevenths()$/;"	f
+testSixth	test/core/ZeninoIntervalToolkitTest.php	/^  public function testSixth($note, $key, $expected)$/;"	f
+testSuperLocrian	test/ZeninoScaleToolkitTest.php	/^    public function testSuperLocrian()$/;"	f
+testSuperLocrian	test/core/ZeninoScaleToolkitTest.php	/^    public function testSuperLocrian()$/;"	f
+testSuperLocrianBB7	test/ZeninoScaleToolkitTest.php	/^    public function testSuperLocrianBB7()$/;"	f
+testSuperLocrianBB7	test/core/ZeninoScaleToolkitTest.php	/^    public function testSuperLocrianBB7()$/;"	f
+testSuperLocrianN5BB7	test/ZeninoScaleToolkitTest.php	/^    public function testSuperLocrianN5BB7()$/;"	f
+testSuperLocrianN5BB7	test/core/ZeninoScaleToolkitTest.php	/^    public function testSuperLocrianN5BB7()$/;"	f
+testSus2	test/ZeninoChordToolkitTest.php	/^    public function testSus2()$/;"	f
+testSus2	test/core/ZeninoChordToolkitTest.php	/^    public function testSus2()$/;"	f
+testSus2Triad	test/ZeninoChordToolkitTest.php	/^    public function testSus2Triad()$/;"	f
+testSus2Triad	test/core/ZeninoChordToolkitTest.php	/^    public function testSus2Triad()$/;"	f
+testSus4	test/ZeninoChordToolkitTest.php	/^    public function testSus4()$/;"	f
+testSus4	test/core/ZeninoChordToolkitTest.php	/^    public function testSus4()$/;"	f
+testSus4Triad	test/ZeninoChordToolkitTest.php	/^    public function testSus4Triad()$/;"	f
+testSus4Triad	test/core/ZeninoChordToolkitTest.php	/^    public function testSus4Triad()$/;"	f
+testSus4b5	test/ZeninoChordToolkitTest.php	/^    public function testSus4b5()$/;"	f
+testSus4b5	test/core/ZeninoChordToolkitTest.php	/^    public function testSus4b5()$/;"	f
+testSus4b9	test/ZeninoChordToolkitTest.php	/^    public function testSus4b9()$/;"	f
+testSus4b9	test/core/ZeninoChordToolkitTest.php	/^    public function testSus4b9()$/;"	f
+testThird	test/core/ZeninoIntervalToolkitTest.php	/^  public function testThird($note, $key, $expected)$/;"	f
+testToMajor	test/core/ZeninoNoteToolkitTest.php	/^    public function testToMajor($note, $expected)$/;"	f
+testToMinor	test/core/ZeninoNoteToolkitTest.php	/^    public function testToMinor($note, $expected)$/;"	f
+testTriad	test/ZeninoChordToolkitTest.php	/^    public function testTriad()$/;"	f
+testTriad	test/core/ZeninoChordToolkitTest.php	/^    public function testTriad()$/;"	f
+testTriads	test/ZeninoChordToolkitTest.php	/^    public function testTriads()$/;"	f
+testTriads	test/core/ZeninoChordToolkitTest.php	/^    public function testTriads()$/;"	f
+testWholeTone	test/ZeninoScaleToolkitTest.php	/^    public function testWholeTone()$/;"	f
+testWholeTone	test/core/ZeninoScaleToolkitTest.php	/^    public function testWholeTone()$/;"	f
+third	core/ZeninoIntervalToolkit.php	/^	public static function third($note, $key)$/;"	f
+thirdProvider	test/core/ZeninoIntervalToolkitTest.php	/^  public function thirdProvider()$/;"	f
+thirteenth	core/ZeninoChordToolkit.php	/^		$thirteenth = array( 'b13', '13' );$/;"	v
+tmp	util/LfmArrayUtil.php	/^    $tmp = array_slice($array, $offset);$/;"	v
+toMajor	core/ZeninoNoteToolkit.php	/^	public static function toMajor($note)$/;"	f
+toMajorProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function toMajorProvider()$/;"	f
+toMinor	core/ZeninoNoteToolkit.php	/^	public static function toMinor ($note)$/;"	f
+toMinorProvider	test/core/ZeninoNoteToolkitTest.php	/^    public function toMinorProvider()$/;"	f
+toReturn	autoload/DirectoriesAutoloader.php	/^    $toReturn = array ();$/;"	v
+toSave	autoload/DirectoriesAutoloader.php	/^    $toSave = '<?php $classes = '.var_export ($this->_classes, true).'; ?>';$/;"	v
+tokens	autoload/DirectoriesAutoloader.php	/^    $tokens = array_filter ($tokens, 'is_array');$/;"	v
+tokens	autoload/DirectoriesAutoloader.php	/^    $tokens = token_get_all (file_get_contents ($pFileName, false));$/;"	v
+tonic	core/ZeninoDiatonicToolkit.php	/^		$tonic = array_search(ZeninoNoteToolkit::removeRedundantAccidentals($key), $results);$/;"	v
+tonic	core/ZeninoScaleToolkit.php	/^		$tonic = $scale[0];$/;"	v
+trd	core/ZeninoIntervalToolkit.php	/^		$trd = self::third($note[0], 'C');$/;"	v
+triad	core/ZeninoChordToolkit.php	/^	public static function triad($note, $key)$/;"	f
+triads	core/ZeninoChordToolkit.php	/^	public static function triads($key)$/;"	f
+triadsCache	core/ZeninoChordToolkit.php	/^	protected static $triadsCache = array();$/;"	v
+unison	core/ZeninoIntervalToolkit.php	/^	public static function unison($note, $key = null){ return $note; }$/;"	f
+val	core/ZeninoIntervalToolkit.php	/^				$val = $up ? ZeninoIntervalToolkit::$shorthand[1]($note)$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^				$val = $up ? ZeninoNoteToolkit::augment($val)$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^				$val = $up ? ZeninoNoteToolkit::diminish($val)$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^			$val = $val % -12;$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^			$val = $val % 12;$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^			$val = -12 + $val;$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^			$val = 12 + $val;$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^		$val = 0;$/;"	v
+val	core/ZeninoIntervalToolkit.php	/^		$val = false;$/;"	v
+val	core/ZeninoNoteToolkit.php	/^		$val = $notes[$note[0]];$/;"	v
+val	core/ZeninoNoteToolkit.php	/^		$val = 0;$/;"	v
+wholeTone	core/ZeninoScaleToolkit.php	/^	public static function wholeTone($note)$/;"	f
+x	core/ZeninoIntervalToolkit.php	/^			$x = self::getAccidentalsValue($note1);$/;"	v
+y	core/ZeninoIntervalToolkit.php	/^			$y = self::getAccidentalsValue($note2);$/;"	v

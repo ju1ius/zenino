@@ -1,0 +1,15 @@
+#! /bin/bash
+
+script_path=$(dirname $(readlink -f $0))
+cd "$script_path/.."
+
+ctags -f tags -h ".php" -R \
+  --exclude="\.git" \
+  --exclude="cache/*" --exclude="test/*" \
+  --totals="yes" \
+  --tag-relative="yes" \
+  --PHP-kinds="+cf" \
+  --regex-PHP="/abstract\s+class\s+([^ ]+)/\1/c/" \
+  --regex-PHP="/interface\s+([^ ]+)/\1/c/" \
+  --regex-PHP="/(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/" \
+

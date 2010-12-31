@@ -4,14 +4,14 @@ class ZeninoMode implements ArrayAccess
 {
 
 	protected $container = array(
-		'tonic' => 'C',
-		'name' => 'ionian',
-		'uid' => '1234567',
-		'skeleton' => array('1','2','3','4','5','6','7'),
-		'parent' => 'ionian',
-		'degree' => 1,
-		'notes' => array('C','D','E','F','G','A','B'),
-		'chords' => array(
+		'tonic'            => 'C',
+		'name'             => 'ionian',
+		'uid'              => '1234567',
+		'skeleton'         => array('1','2','3','4','5','6','7'),
+		'parent'           => 'ionian',
+		'degree'           => 1,
+		'notes'            => array('C','D','E','F','G','A','B'),
+		'chords'           => array(
 			'Maj13',
 			'min13',
 			'min11/b9/b13',
@@ -20,27 +20,34 @@ class ZeninoMode implements ArrayAccess
 			'min11/b13',
 			'ø/b9/11/b13'
 		),
-		'cadential_notes' => array(3, 7),
+		'cadential_notes'  => array(3, 7),
 		'cadential_chords' => array(5)
 	);
 	
 	/* ARRAYACCESS IMPLEMENTATION */
-	public function offsetSet($offset, $value) {
-			//$this->container[$offset] = $value;
+	public function offsetSet($offset, $value)
+	{
+		//$this->container[$offset] = $value;
 	}
-	public function offsetExists($offset) {
-			return isset($this->container[$offset]);
+	public function offsetExists($offset)
+	{
+		return isset($this->container[$offset]);
 	}
-	public function offsetUnset($offset) {
-			//unset($this->container[$offset]);
+	public function offsetUnset($offset)
+	{
+		//unset($this->container[$offset]);
 	}
-	public function offsetGet($offset) {
-			return isset($this->container[$offset]) ? $this->container[$offset] : null;
+	public function offsetGet($offset)
+	{
+		return isset($this->container[$offset]) ? $this->container[$offset] : null;
 	}
 	
 	
 	
-	public static function create(){ return new ZeninoMode(); }
+	public static function create()
+	{
+		return new ZeninoMode();
+	}
 	
 	public function fromName($tonic, $name)
 	{
@@ -72,7 +79,7 @@ class ZeninoMode implements ArrayAccess
 		return $intervals[0];
 	}
 	
-	protected function __toString()
+	public function __toString()
 	{
 		return $this->container['tonic'] .' '. $this->container['name'];
 	}

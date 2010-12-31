@@ -6,38 +6,50 @@ require_once 'ZeninoNoteToolkit.php';
 class ZeninoIntervalToolkit
 {
 	// [shorthand, interval function up, interval function down]
-	protected static $shorthand_lookup = array(
-		array('1', 'majorUnison', 'majorUnison'),
-		array('2', 'majorSecond', 'minorSeventh'),
-		array('3', 'majorThird', 'minorSixth'),
-		array('4', 'perfectFourth', 'perfectFifth'),
-		array('5', 'perfectFifth', 'perfectFourth'),
-		array('6', 'majorSixth', 'minorThird'),
-		array('7', 'majorSeventh', 'minorSecond'),
-		array('9', 'majorSecond', 'minorSeventh'),
-		array('11', 'perfectFourth', 'perfectFifth'),
-		array('13', 'majorSixth', 'minorThird')
-	);
+  protected static
+    $shorthand_lookup = array(
+      array('1',  'majorUnison',   'majorUnison'),
+      array('2',  'majorSecond',   'minorSeventh'),
+      array('3',  'majorThird',    'minorSixth'),
+      array('4',  'perfectFourth', 'perfectFifth'),
+      array('5',  'perfectFifth',  'perfectFourth'),
+      array('6',  'majorSixth',    'minorThird'),
+      array('7',  'majorSeventh',  'minorSecond'),
+      array('9',  'majorSecond',   'minorSeventh'),
+      array('11', 'perfectFourth', 'perfectFifth'),
+      array('13', 'majorSixth',    'minorThird')
+    ),
+    // [name, shorthand_name, half notes]
+    // for major version of this interval
+    $fifth_steps = array(
+			array('unison',  '1', 0),
+			array('fifth',   '5', 7),
+			array('second',  '2', 2),
+			array('sixth',   '6', 9),
+			array('third',   '3', 4),
+			array('seventh', '7', 11),
+			array('fourth',  '4', 5)
+		);
 	
 	
 	/*
-	* Diatonic intervals.
-	* Needs a note and a key.
-	*/
+	 * Diatonic intervals.
+	 * Needs a note and a key.
+	 */
 	
 	/*
-	* One of the most useless methods ever written,
-	* which returns the unison of a note.
-	* The key is not at all important, but is here for  consistency reasons only. 
-	*/
+	 * One of the most useless methods ever written,
+	 * which returns the unison of a note.
+	 * The key is not at all important, but is here for  consistency reasons only. 
+	 */
 	public static function unison($note, $key = null){ return $note; }
 	/*
-	* Take the diatonic second of note in key.
-	* Examples: 
-	* 	second("E", "C")  => 'F'
-	* 	second("E", "D")  => 'F#'
-	* Raises a !KeyError if the `note` is not found in the `key`
-	*/
+	 * Take the diatonic second of note in key.
+	 * Examples: 
+	 * 	second("E", "C")  => 'F'
+	 * 	second("E", "D")  => 'F#'
+	 * Raises a !KeyError if the `note` is not found in the `key`
+	 */
 	public static function second($note, $key)
 	{
 		return ZeninoDiatonicToolkit::interval($key, $note, 1);
@@ -64,8 +76,8 @@ class ZeninoIntervalToolkit
 	}
 	
 	/*
-	* ABSOLUTE INTERVALS
-	*/
+	 * ABSOLUTE INTERVALS
+	 */
 	public static function minorUnison($note)
 	{
 		return ZeninoNoteToolkit::diminish($note);
@@ -188,19 +200,18 @@ class ZeninoIntervalToolkit
 	public static function majorThirteenth($note){ return self::majorSixth($note); }
 	
 	/*
-	* Gets the note an interval (in half notes) away from the given note.
-	* This will produce mostly theoretical sound results, but you should 
-	* use the minor and major functions to work around the corner cases.
-	*/
+	 * Gets the note an interval (in half notes) away from the given note.
+	 * This will produce mostly theoretical sound results, but you should 
+	 * use the minor and major functions to work around the corner cases.
+	 */
 	public static function getInterval($note, $interval, $key = 'C')
 	{
-		$intervals = array_map(
-			create_function(
-				'$x',
-				'return (ZeninoNoteToolkit::noteToInt("'.$key.'") + $x) % 12;'
-			),
-			array(0, 2, 4, 5, 7, 9, 11)
-		);
+    $intervals = array(0, 2, 4, 5, 7, 9, 11);
+    foreach($intervals as &$interval)
+    {
+      $interval = (ZeninoNoteToolkit::noteToInt($key) + $interval) % 12;
+    }
+
 		$key_notes = ZeninoDiatonicToolkit::getNotes($key);
 		foreach($key_notes as $kn)
 		{
@@ -225,9 +236,9 @@ class ZeninoIntervalToolkit
 	}
 	
 	/*
-	* Returns an integer in the range of 0-11,
-	* determining the half steps between note1 and note2
-	*/
+	 * Returns an integer in the range of 0-11,
+	 * determining the half steps between note1 and note2
+	 */
 	public static function measure($note1, $note2)
 	{
 		$res = ZeninoNoteToolkit::noteToInt($note2) - ZeninoNoteToolkit::noteToInt($note1);
@@ -243,37 +254,22 @@ class ZeninoIntervalToolkit
 	}
 	
 	/*
-	* Names the interval between note1 and note2.
-	* Example:
-	*	determine("C", "E")  => 'major third'
-	*	determine("C", "Eb")  => 'minor third'
-	* This works for all intervals.
-	* Note that there are corner cases for 'major' fifths and fourths:
-	*	determine("C", "G")  => 'perfect fifth'
-	*	determine("C", "F")  => 'perfect fourth'
-	*/
+	 * Names the interval between note1 and note2.
+	 * Example:
+	 *	determine("C", "E")  => '3'
+	 *	determine("C", "Eb")  => 'b3'
+	 * This works for all intervals.
+	 * Note that there are corner cases for 'major' fifths and fourths:
+	 *	determine("C", "G")  => '5'
+	 *	determine("C", "F")  => '4'
+	 */
 	public static function determine($note1, $note2)
 	{
 		//  Corner case for unisons ('A' and 'Ab', for instance)
 		if($note1[0] == $note2[0])
-		{
-			//Private function to count the value of accidentals
-			function getVal($note)
-			{
-				$r = 0;
-				$alts = ZeninoNoteToolkit::getAccidentals($note);
-				foreach($alts as $alt)
-				{
-					if($alt == 'b')
-						$r -= 1;
-					else if($alt == '#')
-						$r += 1;
-				}
-				return $r;
-			}
-			
-			$x = getVal($note1);
-			$y = getVal($note2);
+		{			
+			$x = self::getAccidentalsValue($note1);
+			$y = self::getAccidentalsValue($note2);
 			
 			if($x == $y) 						return '1';
 			else if ($x < $y) 			return '#1';
@@ -282,29 +278,19 @@ class ZeninoIntervalToolkit
 		}
 		
 		// Other intervals
-		
 		$n1 = array_search($note1[0], ZeninoNoteToolkit::$FIFTHS);
 		$n2 = array_search($note2[0], ZeninoNoteToolkit::$FIFTHS);
 		$number_of_fifth_steps = $n2 - $n1;
 		
 		if($n2 < $n1)
-			$number_of_fifth_steps = count(ZeninoNoteToolkit::$FIFTHS) - $n1 + $n2;
-		
-		// [name, shorthand_name, half notes]  for major version of this interval
-		$fifth_steps = array(
-			array('unison', '1', 0),
-			array('fifth', '5', 7),
-			array('second', '2', 2),
-			array('sixth', '6', 9),
-			array('third', '3', 4),
-			array('seventh', '7', 11),
-			array('fourth', '4', 5)
-		);
-		
+    {
+			//$number_of_fifth_steps = count(ZeninoNoteToolkit::$FIFTHS) - $n1 + $n2;
+			$number_of_fifth_steps = 7 - $n1 + $n2;
+		}		
 		// Count half steps between note1 and note2
 		$half_notes = self::measure($note1, $note2);
 		// Get the proper list from the number of fifth steps
-		$current = $fifth_steps[$number_of_fifth_steps];
+		$current = self::$fifth_steps[$number_of_fifth_steps];
 		// maj = number of major steps for this interval
 		$maj = $current[2];
 		// if maj is equal to the half steps between note1 and note2
@@ -328,12 +314,29 @@ class ZeninoIntervalToolkit
 			return str_repeat('b', $maj - $half_notes) . $current[1];
 		}
 	}
+
+	/*
+   * Protected function to count the value of accidentals
+   */
+  protected function getAccidentalsValue($note)
+  {
+    $r = 0;
+    $alts = ZeninoNoteToolkit::getAccidentals($note);
+    foreach($alts as $alt)
+    {
+      if($alt == 'b')
+        $r -= 1;
+      else if($alt == '#')
+        $r += 1;
+    }
+    return $r;
+  }
 	
 	/*
-	* Returns the note on interval up or down.
-	* Example:
-	*	from_shorthand('A', 'b3') => 'C'
-	*/
+	 * Returns the note on interval up or down.
+	 * Example:
+	 *	from_shorthand('A', 'b3') => 'C'
+	 */
 	public static function fromShortHand($note, $interval, $up = true)
 	{
 		// warning should be a valid note.
@@ -348,8 +351,7 @@ class ZeninoIntervalToolkit
 		{
 			if($shorthand[0] == substr($interval, -1))
 			{
-				$val = $up
-					? ZeninoIntervalToolkit::$shorthand[1]($note)
+				$val = $up ? ZeninoIntervalToolkit::$shorthand[1]($note)
 					: ZeninoIntervalToolkit::$shorthand[2]($note);
 			}
 		}
@@ -358,7 +360,7 @@ class ZeninoIntervalToolkit
 		if($val == false) return false;
 		
 		// Collect accidentals
-		$int_array = str_split( $interval );
+		$int_array = str_split($interval);
 		foreach($int_array as $char)
 		{
 			if($char == '#')
@@ -377,12 +379,57 @@ class ZeninoIntervalToolkit
 			}
 		}
 	}
-	
+
+	/*
+	 * A consonance is a harmony, chord, or interval considered stable, as opposed
+	 * to a dissonance (see `is_dissonant`). This function tests whether the given
+	 * interval is consonant. This basically means that it checks whether the
+	 * interval is (or sounds like) a unison, third, sixth, perfect fourth or
+	 * perfect fifth. In classical music the fourth is considered dissonant when
+	 * used contrapuntal, which is why you can choose to exclude it.
+	 */
+	public static function isConsonant($note1, $note2, $includeFourths=true)
+	{
+		return self::isImperfectConsonant($note1, $note2, $includeFourths)
+			|| self::isPerfectConsonant($note1, $note2);
+	}
+
+	/*
+	 * Perfect consonances are either unisons, perfect fourths or fifths, or
+	 * octaves (which is the same as a unison in this model; see the
+	 * `container.Note` class for more). Perfect fourths are usually included as
+	 * well, but are considered dissonant when used contrapuntal, which is why you
+	 * can exclude them. 
+	 */
+	public static function isPerfectConsonant($note1, $note2)
+	{
+		$dhalf = self::measure($note1, $note2);
+		return in_array($dhalf, array(0.7)) || ($includeFourths && $dhalf == 5);
+	}
+
+	/*
+	 * Imperfect consonances are either minor or major thirds or minor or major
+	 * sixths. 
+	 */
+	public static function isImperfectConsonant($note1, $note2)
+	{
+		return in_array(self::measure($note1, $note2), array(3,4,8,9));
+	}
+
+	/*
+	 * Tests whether an interval is considered unstable, dissonant. In the default
+	 * case perfect fourths are considered consonant, but this can be changed with
+	 * the `exclude_fourths` flag. 
+	 */
+	public static function isDissonant($note1, $note2, $includeFourths=false)
+	{
+		return !self::isConsonant($note1, $note2, !$includeFourths);
+	}
+
 	/*
 	* A helper function for the minor and major functions.
-	* 
 	*/
-	public static function augmentOrDiminishUntilTheIntervalIsRight($note1, $note2, $interval)
+	protected static function augmentOrDiminishUntilTheIntervalIsRight($note1, $note2, $interval)
 	{
 		$cur = self::measure($note1, $note2);
 		while($cur != $interval)

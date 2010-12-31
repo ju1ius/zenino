@@ -23,11 +23,12 @@ class ZeninoDiatonicToolkit
     */
   public static function getNotes($key)
   {
-    #check cache
-		//global key_dict
+    // check cache
 		if( array_key_exists($key, self::$keyCache) )
-			return self::$keyCache[$key];
-		
+		{
+      return self::$keyCache[$key];
+    }
+
 		if( !ZeninoNoteToolkit::isValidNote($key) )
 		{
 			throw new NoteFormatError($key);
@@ -36,48 +37,51 @@ class ZeninoDiatonicToolkit
 		$alts = implode( '', ZeninoNoteToolkit::getAccidentals($key) );
 		
 		$fifth_index = array_search($base_note, ZeninoNoteToolkit::$FIFTHS);
-		$result = array();
+		$results = array();
 		
-		# fifth_index = 0 is a special case. It's the key of F and needs 
-		# Bb instead of B included in the result.
+		// fifth_index = 0 is a special case. It's the key of F and needs 
+		// Bb instead of B included in the result.
 		
 		if($fifth_index !== 0)
 		{
-			$result[] = ZeninoNoteToolkit::$FIFTHS[($fifth_index - 1) % 7] . $alts;
+			$results[] = ZeninoNoteToolkit::$FIFTHS[($fifth_index - 1) % 7] . $alts;
 			
-			$len = count(ZeninoNoteToolkit::$FIFTHS);
-			for($i = $fifth_index; $i < $len; $i++)
+			//$len = count(ZeninoNoteToolkit::$FIFTHS);
+      $len = 7;
+      for($i = $fifth_index; $i < $len; $i++)
 			{
-				$result[] = ZeninoNoteToolkit::$FIFTHS[$i] . $alts;
+				$results[] = ZeninoNoteToolkit::$FIFTHS[$i] . $alts;
 			}
 			
 			$len = $fifth_index - 1;
 			for($i = 0; $i < $len; $i++)
 			{
-				$result[] = ZeninoNoteToolkit::$FIFTHS[$i] . $alts . '#';
+				$results[] = ZeninoNoteToolkit::$FIFTHS[$i] . $alts . '#';
 			}
-			
 		}
 		else
 		{
-			for($i = 0; $i < 7; $i++)
+			for($i = 0; $i < 6; $i++)
 			{
-				$result[] = ZeninoNoteToolkit::$FIFTHS[$i] . $alts;
+				$results[] = ZeninoNoteToolkit::$FIFTHS[$i] . $alts;
 			}
-			$result[] = 'Bb' . $alts;
+			$results[] = 'Bb' . $alts;
 		}
 
-		sort($result);
+    // Remove redundant #'s and b's from the result
+    foreach ($results as &$note)
+    {
+      $note = ZeninoNoteToolkit::removeRedundantAccidentals($note);
+    }
+		sort($results);
 
-		# Remove redundant #'s and b's from the result
-		$result = array_map('ZeninoNoteToolkit::removeRedundantAccidentals', $result);
-		$tonic = array_search(ZeninoNoteToolkit::removeRedundantAccidentals($key), $result);
-		$result = LfmArrayUtil::rotate($result, $tonic);
+		$tonic = array_search(ZeninoNoteToolkit::removeRedundantAccidentals($key), $results);
+		$results = LfmArrayUtil::rotate($results, $tonic);
 		
-		#Save result to cache
-		self::$keyCache[$key] = $result;
+		// Save result to cache
+		self::$keyCache[$key] = $results;
 		
-		return $result;
+		return $results;
   }
   
  /*
@@ -89,29 +93,30 @@ class ZeninoDiatonicToolkit
   {
 		if(!ZeninoNoteToolkit::inRange($note_int))
 		{
-			throw new RangeError("Integer not in range 0-11.");
+			throw new RangeError($note_int, '(0..11)');
 		}
 		$intervals = array(0, 2, 4, 5, 7, 9, 11);
-		$current = ZeninoNoteToolkit::noteToInt($key);
-		$known_intervals = array_map(
-			create_function(
-				'$x',
-				'return ($x + '.$current.') % 12;'
-			),
-			$intervals
-		);
+    $current = ZeninoNoteToolkit::noteToInt($key);
+
+    $known_intervals = array();
+    foreach($intervals as $interval)
+    {
+      $known_intervals[] = ($interval + $current) % 12;
+    }
+
 		$known_notes = self::getNotes($key);
 		
 		if(in_array($note_int, $known_intervals))
 		{
 			return $known_notes[array_search($note_int, $known_intervals)];
 		}
-		else
-		{
-			if(in_array($note_int - 1, $known_intervals))
-				return $known_notes[array_search($note_int - 1, $known_intervals)] . '#';
-			else if(in_array($note_int + 1, $known_intervals))
-				return $known_notes[array_search($note_int + 1, $known_intervals)] . 'b';
+    else if(in_array($note_int - 1, $known_intervals))
+    {
+      return $known_notes[array_search($note_int - 1, $known_intervals)] . '#';
+    }
+		else if(in_array($note_int + 1, $known_intervals))
+    {
+			return $known_notes[array_search($note_int + 1, $known_intervals)] . 'b';
 		}
   }
   
@@ -130,11 +135,13 @@ class ZeninoDiatonicToolkit
     $notes_in_key = self::getNotes($key);
     foreach($notes_in_key as $note)
     {
-      if ($note[0] == $start_note[0])
-        $index = array_search($note, $notes_in_key);
+      if($note[0] == $start_note[0])
+      {
+        $start_index = array_search($note, $notes_in_key);
+      }
     }
-	
-    return $notes_in_key[($index + $interval) % 7];
+    $index = LfmMathUtil::modulus($start_index + $interval, 7);
+    return $notes_in_key[$index];
   }
   
 }

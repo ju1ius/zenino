@@ -24,9 +24,10 @@ class DirectoriesAutoloader
   private static $_instance = false;
   public static function instance ($pTmpPath)
   {
-    if(self::$_instance === false){
+    if(self::$_instance === false)
+    {
       self::$_instance = new DirectoriesAutoloader();
-      self::$_instance->setCachePath ($pTmpPath);
+      self::$_instance->setCachePath($pTmpPath);
     }
     return self::$_instance;
   }
@@ -34,8 +35,15 @@ class DirectoriesAutoloader
 
   //--- Cache
   private $_cachePath;
-  public function setCachePath ($pTmp)
+  public function setCachePath($pTmp)
   {
+    $dir = dirname($pTmp);
+    if(!is_writable($dir))
+    {
+      throw new DirectoriesAutoloaderException(
+        'Cannot write in given CachePath ['.$dir.']'
+      );
+    };
     $this->_cachePath = $pTmp;
   }
   //--- /Cache
@@ -55,7 +63,7 @@ class DirectoriesAutoloader
       $this->_canRegenerate = false;//pour éviter que l'on
       $this->_includesAll ();
       $this->_saveInCache ();
-      return $this->autoload ($pClassName);
+      return $this->autoload($pClassName);
     }
     //on a vraiment rien trouvé.
     return false;
@@ -71,32 +79,32 @@ class DirectoriesAutoloader
     //Inclusion de toute les classes connues
     foreach ($this->_directories as $directory => $recursive)
     {
-       $directories = new AppendIterator ();
+      $directories = new AppendIterator ();
 
-       //On ajoute tous les chemins à parcourir
-       if ($recursive)
-       {
-          $directories->append(new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator($directory)
-          ));
-       }
-       else
-       {
-          $directories->append(new DirectoryIterator($directory));
-       }
+      //On ajoute tous les chemins à parcourir
+      if ($recursive)
+      {
+        $directories->append(new RecursiveIteratorIterator(
+          new RecursiveDirectoryIterator($directory)
+        ));
+      }
+      else
+      {
+        $directories->append(new DirectoryIterator($directory));
+      }
 
-       //On va filtrer les fichiers php depuis les répertoires trouvés.
-       $files = new ExtensionFilterIteratorDecorator($directories);
-       $files->setExtension('.php');
+      //On va filtrer les fichiers php depuis les répertoires trouvés.
+      $files = new ExtensionFilterIteratorDecorator($directories);
+      $files->setExtension('.php');
 
-       foreach ($files as $fileName)
-       {
-          $classes = $this->_extractClasses ((string) $fileName);
-          foreach ($classes as $className=>$fileName)
-          {
-             $this->_classes[strtolower ($className)] = $fileName;
-          }
-       }
+      foreach ($files as $fileName)
+      {
+        $classes = $this->_extractClasses ((string) $fileName);
+        foreach ($classes as $className=>$fileName)
+        {
+          $this->_classes[strtolower ($className)] = $fileName;
+        }
+      }
     }
   }
 
@@ -130,7 +138,7 @@ class DirectoriesAutoloader
   private function _saveIncache ()
   {
     $toSave = '<?php $classes = '.var_export ($this->_classes, true).'; ?>';
-    if(file_put_contents($this->_cachePath, $toSave) === false)
+    if(false === file_put_contents($this->_cachePath, $toSave))
     {
       throw new DirectoriesAutoloaderException('Cannot write in given CachePath ['.$pTmp.']');
     };

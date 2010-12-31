@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__).'/../ZeninoLoader.php';
+require_once dirname(__FILE__).'/../../ZeninoLoader.php';
 ZeninoLoader::register();
 
 /**
@@ -26,80 +26,99 @@ class ZeninoIntervalToolkitTest extends PHPUnit_Framework_TestCase
   }
 
   /**
-   * @todo Implement testUnison().
+   * @dataProvider secondProvider
    */
-  public function testUnison()
+  public function testSecond($note, $key, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::second($note, $key);
+    $this->assertEquals($expected, $result);
+  }
+  public function secondProvider()
+  {
+    return array(
+      array('E', 'C', 'F'), array('G#', 'B', 'A#'),
+      array('C##', 'F##', 'D##'), array('Gbb', 'Dbb', 'Abb')
+    );
+  }
+  
+  /**
+   * @dataProvider thirdProvider
+   */
+  public function testThird($note, $key, $expected)
+  {
+    $result = ZeninoIntervalToolkit::third($note, $key);
+    $this->assertEquals($expected, $result);
+  }
+  public function thirdProvider()
+  {
+    return array(
+      array('E', 'C', 'G'), array('G#', 'B', 'B'),
+      array('C##', 'F##', 'E##'), array('Gbb', 'Dbb', 'Bbb')
+    );
   }
 
   /**
-   * @todo Implement testSecond().
+   * @dataProvider fourthProvider
    */
-  public function testSecond()
+  public function testFourth($note, $key, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::fourth($note, $key);
+    $this->assertEquals($expected, $result);
+  }
+  public function fourthProvider()
+  {
+    return array(
+      array('E', 'C', 'A'), array('G#', 'B', 'C#'),
+      array('C##', 'F##', 'F##'), array('Gbb', 'Dbb', 'Cb')
+    );
   }
 
   /**
-   * @todo Implement testThird().
+   * @dataProvider fifthProvider
    */
-  public function testThird()
+  public function testFifth($note, $key, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::fifth($note, $key);
+    $this->assertEquals($expected, $result);
+  }
+  public function fifthProvider()
+  {
+    return array(
+      array('E', 'C', 'B'), array('G#', 'B', 'D#'),
+      array('C##', 'F##', 'G##'), array('Gbb', 'Dbb', 'Dbb')
+    );
   }
 
   /**
-   * @todo Implement testFourth().
+   * @dataProvider sixthProvider
    */
-  public function testFourth()
+  public function testSixth($note, $key, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::sixth($note, $key);
+    $this->assertEquals($expected, $result);
+  }
+  public function sixthProvider()
+  {
+    return array(
+      array('E', 'C', 'C'), array('G#', 'B', 'E'),
+      array('C##', 'F##', 'A##'), array('Gbb', 'Dbb', 'Ebb')
+    );
   }
 
   /**
-   * @todo Implement testFifth().
+   * @dataProvider seventhProvider
    */
-  public function testFifth()
+  public function testSeventh($note, $key, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::seventh($note, $key);
+    $this->assertEquals($expected, $result);
   }
-
-  /**
-   * @todo Implement testSixth().
-   */
-  public function testSixth()
+  public function seventhProvider()
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
-  }
-
-  /**
-   * @todo Implement testSeventh().
-   */
-  public function testSeventh()
-  {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    return array(
+      array('E', 'C', 'D'), array('G#', 'B', 'F#'),
+      array('C##', 'F##', 'B#'), array('Gbb', 'Dbb', 'Fb')
+    );
   }
 
   /**
@@ -600,32 +619,42 @@ class ZeninoIntervalToolkitTest extends PHPUnit_Framework_TestCase
    */
   public function testInvert()
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    // Remove the following lines when you implement this test.
+    $this->markTestSkipped(
+      'Testing ZeninoIntervalToolkit::invert comes down to testing array_reverse...'
+    );
   }
 
   /**
-   * @todo Implement testDetermine().
+   * @dataProvider determineProvider
    */
-  public function testDetermine()
+  public function testDetermine($note1, $note2, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::determine($note1, $note2);
+    $this->assertEquals($expected, $result);
+  }
+  public function determineProvider()
+  {
+    return array(
+      array('A', 'Db', 'b4'), array('F#', 'D##', '#6'),
+      array('G', 'Ebb', 'bb6'), array('Bb', 'Gb', 'b6')
+    );
   }
 
   /**
-   * @todo Implement testFromShortHand().
+   * @dataProvider fromShortHandProvider
    */
-  public function testFromShortHand()
+  public function testFromShortHand($note, $interval, $up, $expected)
   {
-      // Remove the following lines when you implement this test.
-      $this->markTestIncomplete(
-        'This test has not been implemented yet.'
-      );
+    $result = ZeninoIntervalToolkit::fromShortHand($note, $interval, $up);
+    $this->assertEquals($expected, $result);
+  }
+  public function fromShortHandProvider()
+  {
+    return array(
+      array('A', 'b3', true, 'C'), array('F#', '7', true, 'E#'),
+      array('Bb', '#9', true, 'C#'), array('Gb', 'b6', false, 'Bb')
+    );
   }
 }
 ?>

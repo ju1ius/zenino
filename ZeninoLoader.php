@@ -1,4 +1,5 @@
 <?php
+
 require_once dirname(__FILE__).'/autoload/DirectoriesAutoloader.php';
   
 class ZeninoLoader

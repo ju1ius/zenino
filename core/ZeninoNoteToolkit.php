@@ -161,9 +161,9 @@ class ZeninoNoteToolkit
 			return array();
 	}
 	
-	protected static function inRange($int)
-	{
-		return in_array( $int, range(0,11) );
+	public static function inRange($int)
+  {
+    return $int >= 0 && $int <= 11;
 	}
 
 }

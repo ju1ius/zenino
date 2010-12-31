@@ -3,111 +3,114 @@
 class ZeninoChordToolkit
 {
 	public static $CHORD_EXTENSIONS = array(
-		'9th'	=> array('b9', '9', '#9'),
-		'11th'	=> array('11', '#11'),
-		'13th'	=> array('b13', '13')
+		'9th'  => array('b9', '9', '#9'),
+		'11th' => array('11', '#11'),
+		'13th' => array('b13', '13')
 	);
 	public static $shorthands = array(
 		/* TRIADS */
-		'M'			=> 'majorTriad',
-		'Maj'		=> 'majorTriad',
-		'maj'		=> 'majorTriad',
-		''			=> 'majorTriad',
-		'm'			=> 'minorTriad',
-		'min'		=> 'minorTriad',
-		'-'			=> 'minorTriad',
-		'dim'		=> 'diminishedTriad',
-		'o'			=> 'diminishedTriad',
-		'aug'		=> 'augmentedTriad',
-		'+'			=> 'augmentedTriad',
-		'sus4'		=> 'sus4Triad',
-		'sus'		=> 'sus4Triad',
-		'sus2'		=> 'sus2Triad',
+		'M'    => 'majorTriad',
+		'Maj'  => 'majorTriad',
+		'maj'  => 'majorTriad',
+		''     => 'majorTriad',
+		'm'    => 'minorTriad',
+		'min'  => 'minorTriad',
+		'-'    => 'minorTriad',
+		'dim'  => 'diminishedTriad',
+		'o'    => 'diminishedTriad',
+		'aug'  => 'augmentedTriad',
+		'+'    => 'augmentedTriad',
+		'sus4' => 'sus4Triad',
+		'sus'  => 'sus4Triad',
+		'sus2' => 'sus2Triad',
 
 		/* SEVENTHS */
-		'm7' 		=> 'minorSeventh',
-		'min7'		=> 'minorSeventh',
-		'-7'		=> 'minorSeventh',
-		'maj7'		=> 'majorSeventh',
-		'Maj7'		=> 'majorSeventh',
-		'M7'		=> 'majorSeventh',
-		'dom7'		=> 'dominantSeventh',
-		'7'			=> 'dominantSeventh',
-		'm7b5'		=> 'halfDiminished',
-		'min7b5'	=> 'halfDiminished',
-		'-7b5'		=> 'halfDiminished',
-		'ø'			=> 'halfDiminished',
-		'dim7'		=> 'diminishedSeventh',
-		'o7'		=> 'diminishedSeventh',
-		'oMaj7'		=> 'diminishedMajorSeventh',
-		'oM7'		=> 'diminishedMajorSeventh',
-		'm/M7'		=> 'minorMajorSeventh',
-		'mM7'		=> 'minorMajorSeventh',
-		'minMaj7'	=> 'minorMajorSeventh',
-		'-Maj7'		=> 'minorMajorSeventh',
+		'm7'      => 'minorSeventh',
+		'min7'    => 'minorSeventh',
+		'-7'      => 'minorSeventh',
+		'maj7'    => 'majorSeventh',
+		'Maj7'    => 'majorSeventh',
+		'M7'      => 'majorSeventh',
+		'dom7'    => 'dominantSeventh',
+		'7'       => 'dominantSeventh',
+		'm7b5'    => 'halfDiminished',
+		'min7b5'  => 'halfDiminished',
+		'-7b5'    => 'halfDiminished',
+		'ø'       => 'halfDiminished',
+		'dim7'    => 'diminishedSeventh',
+		'o7'      => 'diminishedSeventh',
+		'oMaj7'   => 'diminishedMajorSeventh',
+		'oM7'     => 'diminishedMajorSeventh',
+		'm/M7'    => 'minorMajorSeventh',
+		'mM7'     => 'minorMajorSeventh',
+		'minMaj7' => 'minorMajorSeventh',
+		'-Maj7'   => 'minorMajorSeventh',
 		
 		/* AUGMENTED SEVENTHS */
-		'7#5'		=> 'augmentedDominantSeventh',
-		'7+'		=> 'augmentedDominantSeventh',
-		'7+5'		=> 'augmentedDominantSeventh',
-		'M7#5'		=> 'augmentedMajorSeventh',
-		'M7+'		=> 'augmentedMajorSeventh',
-		'M7+5'		=> 'augmentedMajorSeventh',
-		'Maj7#5'	=> 'augmentedMajorSeventh',
-		'Maj7+'		=> 'augmentedMajorSeventh',
-		'Maj7+5'	=> 'augmentedMajorSeventh',
-		'mM7+'		=> 'augmentedMinorMajorSeventh',
-		'mM7#5'		=> 'augmentedMinorMajorSeventh',
-		'minMaj7+'	=> 'augmentedMinorMajorSeventh',
-		'minMaj7#5'	=> 'augmentedMinorMajorSeventh',
-		'-M7#5'		=> 'augmentedMinorMajorSeventh',
-		'-Maj7#5'	=> 'augmentedMinorMajorSeventh',
+		'7#5'       => 'augmentedDominantSeventh',
+		'7+'        => 'augmentedDominantSeventh',
+		'7+5'       => 'augmentedDominantSeventh',
+		'M7#5'      => 'augmentedMajorSeventh',
+		'M7+'       => 'augmentedMajorSeventh',
+		'M7+5'      => 'augmentedMajorSeventh',
+		'Maj7#5'    => 'augmentedMajorSeventh',
+		'Maj7+'     => 'augmentedMajorSeventh',
+		'Maj7+5'    => 'augmentedMajorSeventh',
+		'mM7+'      => 'augmentedMinorMajorSeventh',
+		'mM7#5'     => 'augmentedMinorMajorSeventh',
+		'minMaj7+'  => 'augmentedMinorMajorSeventh',
+		'minMaj7#5' => 'augmentedMinorMajorSeventh',
+		'-M7#5'     => 'augmentedMinorMajorSeventh',
+		'-Maj7#5'   => 'augmentedMinorMajorSeventh',
 		
 		/* SUSPENDED CHORDS */
-		'7sus4'		=> 'dominantSeventhSus4',
-		'7sus'		=> 'dominantSeventhSus4',
-		'sus4b5'	=> 'dominantSeventhSus4B5',
-		'susb5'		=> 'dominantSeventhSus4B5',
-		'sus4b9'	=> 'dominantSeventhSus4B9',
-		'susb9'		=> 'dominantSeventhSus4B9',
+		'7sus4'  => 'dominantSeventhSus4',
+		'7sus'   => 'dominantSeventhSus4',
+		'sus4b5' => 'dominantSeventhSus4B5',
+		'susb5'  => 'dominantSeventhSus4B5',
+		'sus4b9' => 'dominantSeventhSus4B9',
+		'susb9'  => 'dominantSeventhSus4B9',
 		
 		/* SIXTHS */
-		'm6'		=> 'minorSixth',
-		'min6'		=> 'minorSixth',
-		'-6'		=> 'minorSixth',
-		'maj6'		=> 'majorSixth',
-		'M6'		=> 'majorSixth',
-		'Maj6'		=> 'majorSixth',
-		'6'			=> 'majorSixth', 
+		'm6'   => 'minorSixth',
+		'min6' => 'minorSixth',
+		'-6'   => 'minorSixth',
+		'maj6' => 'majorSixth',
+		'M6'   => 'majorSixth',
+		'Maj6' => 'majorSixth',
+		'6'    => 'majorSixth',
 
 		/* NINTHS */
-		'9'			=> 'dominantNinth',
-		'maj9'		=> 'majorNinth',
-		'Maj9'		=> 'majorNinth',
-		'M9'		=> 'majorNinth',
-		'm9'		=> 'minorNinth',
-		'min9'		=> 'minorNinth',
-		'-9'		=> 'minorNinth',
+		'9'    => 'dominantNinth',
+		'maj9' => 'majorNinth',
+		'Maj9' => 'majorNinth',
+		'M9'   => 'majorNinth',
+		'm9'   => 'minorNinth',
+		'min9' => 'minorNinth',
+		'-9'   => 'minorNinth',
 
 		/* ELEVENTHS */
-		'm11'		=> 'minorEleventh',
-		'min11'		=> 'minorEleventh',
-		'-11'		=> 'mminorEleventh',
+		'm11'   => 'minorEleventh',
+		'min11' => 'minorEleventh',
+		'-11'   => 'mminorEleventh',
 
 		/* THIRTEENTHS */
-		'maj13'		=> 'majorThirteenth',
-		'Maj13'		=> 'majorThirteenth',
-		'M13'		=> 'majorThirteenth',
-		'min13'		=> 'minorThirteenth',
-		'm13'		=> 'minorThirteenth',
-		'-13'		=> 'minorThirteenth',
-		'13'		=> 'dominantThirteenth',
+		'maj13' => 'majorThirteenth',
+		'Maj13' => 'majorThirteenth',
+		'M13'   => 'majorThirteenth',
+		'min13' => 'minorThirteenth',
+		'm13'   => 'minorThirteenth',
+		'-13'   => 'minorThirteenth',
+		'13'    => 'dominantThirteenth',
 
 		/* ALTERED CHORDS */
-		'7b5'		=> 'dominantSeventhB5',
-		'7alt'		=> 'dominantAltered'
+		'7b5'  => 'dominantSeventhB5',
+		'7alt' => 'dominantAltered'
 
 	);
+  protected static $allowed_exts =  array(
+    'b9', '9', '#9', '11', '#11', 'b13', '13'
+  );
 	# A cache for composed triads
 	protected static $triadsCache = array();
 	# A cache for composed sevenths
@@ -184,10 +187,7 @@ class ZeninoChordToolkit
 	
 	public static function isValidExt($ext)
 	{
-		$allowed = array(
-			'b9', '9', '#9', '11', '#11', 'b13', '13'
-		);
-		return in_array($ext, $allowed);
+		return in_array($ext, self::$allowed_exts);
 	}
 	
 	/*
@@ -235,8 +235,8 @@ class ZeninoChordToolkit
 	
 	public static function extend($chord, $exts)
 	{
-		$ninth = array( 'b9', '9', '#9' );
-		$eleventh = array( '11', '#11' );
+		$ninth      = array( 'b9', '9', '#9' );
+		$eleventh   = array( '11', '#11' );
 		$thirteenth = array( 'b13', '13' );
 		foreach($exts as $ext)
 		{
@@ -283,17 +283,15 @@ class ZeninoChordToolkit
 	public static function triads($key)
 	{
 		if( array_key_exists($key, self::$triadsCache) )
-			return self::$triadsCache[$key];
-		
-		$res = array_map(
-			create_function(
-				'$x',
-				'return self::triad($x, '.$key.');'
-			),
-			ZeninoDiatonicToolkit::getNotes($key)
-		);
-		self::$triadsCache[$key] = $res;
-		return $res;
+      return self::$triadsCache[$key];
+
+    $notes = ZeninoDiatonicToolkit::getNotes($key);
+    foreach ($notes as &$note)
+    {
+      $note = self::triad($note, $key);
+    }
+		self::$triadsCache[$key] = $notes;
+		return $notes;
 	}
 	
 	
@@ -383,16 +381,14 @@ class ZeninoChordToolkit
 	{
 		if( array_key_exists($key, self::$seventhsCache) )
 			return self::$seventhsCache[$key];
-		
-		$res = array_map(
-			create_function(
-				'$x',
-				'return self::seventh($x, '.$key.');'
-			),
-			ZeninoDiatonicToolkit::getNotes($key)
-		);
-		self::$seventhsCache[$key] = $res;
-		return $res;
+	  
+    $notes = ZeninoDiatonicToolkit::getNotes($key);
+    foreach ($notes as &$note)
+    {
+      $note = self::seventh($note, $key);
+    }
+		self::$seventhsCache[$key] = $notes;
+		return $notes;
 	}
 	
 	/*
@@ -607,4 +603,5 @@ class ZeninoChordToolkit
 	public static function maj13($note){ return self::majorThirteenth($note); }
 	public static function min13($note){ return self::minorThirteenth($note); }
 	public static function alt($note){ return self::dominantAltered($note); }
+
 }
